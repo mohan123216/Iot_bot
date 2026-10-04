@@ -1,0 +1,8 @@
+threshold_type,threshold_value,description
+fixed_value,0.5,Reject flow if max(P) < 0.5
+fixed_value,0.6,Reject flow if max(P) < 0.6
+fixed_value,0.7,Reject flow if max(P) < 0.7
+fixed_value,0.8,Reject flow if max(P) < 0.8
+fixed_value,0.9,Reject flow if max(P) < 0.9
+fixed_value,0.95,Reject flow if max(P) < 0.95
+fixed_value,0.99,Reject flow if max(P) < 0.99

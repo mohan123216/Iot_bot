@@ -1,0 +1,6 @@
+metric,value
+Service_Scan Recall (%),41.22
+Macro Recall Excluding Service_Scan (%),64.94
+Median Recall Excluding Service_Scan (%),83.32
+Attacks Performing Below Service_Scan,2/6 (33.3%)
+Attacks Performing Above Service_Scan,4/6 (66.7%)

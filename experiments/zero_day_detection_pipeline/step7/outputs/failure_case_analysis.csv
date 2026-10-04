@@ -1,0 +1,7 @@
+predicted_class,total_flows,conf_95_det,mah_det,leaf_det,hybrid_or_det,conf_mah_99_det,three_sig_det,detected_by_all_three,missed_by_all_three,hybrid_or_pct,conf_mah_99_pct
+OS_Fingerprint,7040,1068,1216,1318,2416,2748,1656,102,4332,34.32,39.03
+TCP,132,131,28,130,131,132,132,26,0,99.24,100.0
+HTTP,120,58,119,111,120,120,120,56,0,100.0,100.0
+Keylogging,6,5,5,6,6,6,6,4,0,100.0,100.0
+Normal,3,3,0,0,0,3,3,0,0,0.0,100.0
+Data_Exfiltration,1,0,1,1,1,1,1,0,0,100.0,100.0

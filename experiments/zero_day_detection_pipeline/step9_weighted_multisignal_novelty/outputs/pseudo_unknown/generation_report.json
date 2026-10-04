@@ -1,0 +1,36 @@
+{
+  "total_pseudo_unknowns": 4500,
+  "generator_breakdown": {
+    "cross_class_interpolation": 1500,
+    "controlled_perturbation": 1500,
+    "boundary_low_density": 1500
+  },
+  "random_seed": 42,
+  "strategies": {
+    "cross_class_interpolation": {
+      "count": 1500,
+      "lambdas": [
+        0.25,
+        0.5,
+        0.75
+      ]
+    },
+    "controlled_perturbation": {
+      "count": 1500,
+      "sigmas": [
+        1.5,
+        2.0
+      ]
+    },
+    "boundary_low_density": {
+      "count": 1500,
+      "gammas": [
+        1.5,
+        2.0,
+        2.5
+      ]
+    }
+  },
+  "zero_day_quarantined": true,
+  "calibration_source": "validation.parquet"
+}

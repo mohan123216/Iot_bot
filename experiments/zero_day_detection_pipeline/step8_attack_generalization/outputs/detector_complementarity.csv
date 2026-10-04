@@ -1,0 +1,8 @@
+held_out_attack,sample_count,jaccard_conf_mah,jaccard_conf_leaf,jaccard_mah_leaf,conf_only_count,mah_only_count,leaf_only_count,conf_and_mah_count,conf_and_leaf_count,mah_and_leaf_count,all_three_count,exactly_one_count,exactly_two_count,missed_by_all_count,missed_by_all_pct
+Data_Exfiltration,6,1.0,1.0,1.0,0,0,0,0,0,0,1,0,0,5,83.33
+HTTP,266,0.5321,0.6774,0.6453,0,17,0,25,52,55,116,17,132,1,0.38
+Keylogging,73,0.2083,0.0909,0.7826,1,2,0,3,0,16,2,3,19,49,67.12
+OS_Fingerprint,1777,0.0617,0.0588,0.0492,23,50,3,4,1,2,1,76,7,1693,95.27
+Service_Scan,7302,0.0777,0.5188,0.0976,296,1106,526,2,779,73,188,1928,854,4332,59.33
+TCP,159340,0.1986,0.6185,0.3781,21969,25827,28,2999,48445,20956,26039,47824,72400,13077,8.21
+UDP,198344,0.0584,0.0651,0.8925,1347,21042,0,86,38,164300,11495,22389,164424,36,0.02

@@ -1,0 +1,7 @@
+predicted_class,total_flows,detected_flows,missed_flows,subgroup_recall_pct,mean_p_max,mean_mahalanobis,mean_relative_distance,mean_leaf_novelty,mean_s_unified,mean_threshold
+Data_Exfiltration,1,1,0,100.0,0.9957,2.598,0.6371,0.2807,0.7698,0.741
+HTTP,120,120,0,100.0,0.857,27.2399,15.8396,0.3483,0.9985,0.9633
+Keylogging,6,6,0,100.0,0.8435,63.04,0.8505,0.5462,0.8031,0.686
+Normal,3,0,3,0.0,0.5449,1.5251,1.2521,0.4072,0.7743,0.8108
+OS_Fingerprint,7040,2636,4404,37.44,0.9652,2.504,1.7564,0.237,0.5833,0.835
+TCP,132,132,0,100.0,0.6219,65.8725,47.3195,0.3647,0.9906,0.9292

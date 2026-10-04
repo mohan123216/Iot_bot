@@ -1,0 +1,7 @@
+predicted_class,total_samples,detected_mahalanobis,detected_leaf,detected_hybrid_or,pct_detected_hybrid
+OS_Fingerprint,7040,1216,1318,2416,34.32
+TCP,132,28,130,131,99.24
+HTTP,120,119,111,120,100.0
+Keylogging,6,5,6,6,100.0
+Normal,3,0,0,0,0.0
+Data_Exfiltration,1,1,1,1,100.0

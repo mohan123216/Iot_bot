@@ -1,0 +1,8 @@
+percentile,percentile_label,known_acceptance_pct,false_unknown_rate_pct,false_unknown_flows,benign_rejection_pct,benign_false_alarm_flows,pseudo_recall_pct,pseudo_precision_pct,pseudo_f1_pct,is_feasible
+90.0,P90.0,89.99,10.01,5407,8.33,6,79.78,46.96,59.12,False
+92.0,P92.0,92.0,8.0,4326,5.56,4,76.5,51.48,61.54,False
+95.0,P95.0,94.99,5.01,2707,2.78,2,72.62,61.68,66.7,True
+97.0,P97.0,96.99,3.01,1626,1.39,1,69.52,71.95,70.71,True
+98.0,P98.0,97.99,2.01,1085,1.39,1,61.28,77.22,68.33,True
+99.0,P99.0,98.99,1.01,545,1.39,1,50.4,84.73,63.2,True
+99.5,P99.5,99.49,0.51,275,1.39,1,45.37,90.82,60.51,True

@@ -1,0 +1,30 @@
+{
+  "held_out_attack": "OS_Fingerprint",
+  "known_classes": [
+    "Data_Exfiltration",
+    "HTTP",
+    "Keylogging",
+    "Normal",
+    "Service_Scan",
+    "TCP",
+    "UDP"
+  ],
+  "class_to_idx": {
+    "Data_Exfiltration": 0,
+    "HTTP": 1,
+    "Keylogging": 2,
+    "Normal": 3,
+    "Service_Scan": 4,
+    "TCP": 5,
+    "UDP": 6
+  },
+  "idx_to_class": {
+    "0": "Data_Exfiltration",
+    "1": "HTTP",
+    "2": "Keylogging",
+    "3": "Normal",
+    "4": "Service_Scan",
+    "5": "TCP",
+    "6": "UDP"
+  }
+}

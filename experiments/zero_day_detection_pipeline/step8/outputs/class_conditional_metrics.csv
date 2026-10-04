@@ -1,0 +1,8 @@
+class,class_idx,val_samples,known_test_samples,zd_samples,tau_mahalanobis_95,tau_reldist_95,tau_knn10_95,zd_detected_by_rel,zd_recall_by_rel
+Data_Exfiltration,0,2,1,1,0.8635,0.9378,1.9,1,100.0
+HTTP,1,40,40,120,6.0831,1.9088,1.6761,119,99.17
+Keylogging,2,8,10,6,2.8872,1.6337,3.0206,0,0.0
+Normal,3,74,72,3,10.2882,0.8149,91.4949,0,0.0
+OS_Fingerprint,4,266,267,7040,4.0975,2.4858,18.6088,1845,26.21
+TCP,5,23901,23901,132,6.1893,1.4726,4.2169,28,21.21
+UDP,6,29751,29752,0,6.0493,1.7778,12.7068,0,0.0

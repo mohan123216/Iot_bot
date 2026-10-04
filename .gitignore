@@ -1,0 +1,72 @@
+# ==========================================
+# Byte-compiled / optimized / Python cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+*.so
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# Operating System Artifacts
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ==========================================
+# Datasets (Excluded from GitHub repository)
+# ==========================================
+# Raw UNSW Bot-IoT dataset files
+UNSW_2018_IoT_Botnet_Full5pc*.csv
+UNSW_*.csv
+*.pcap
+*.pcapng
+*.tar.gz
+*.zip
+
+# Preprocessed and split dataset files
+experiments/zero_day_detection_pipeline/data/cleaned/*
+!experiments/zero_day_detection_pipeline/data/cleaned/.gitkeep
+
+experiments/zero_day_detection_pipeline/data/splits/*
+!experiments/zero_day_detection_pipeline/data/splits/.gitkeep
+
+# Catch-all for any additional raw data directories
+**/data/raw/*
+!**/data/raw/.gitkeep
+
+# ==========================================
+# Temporary Files & Scratch
+# ==========================================
+*.tmp
+*.temp
+*.bak

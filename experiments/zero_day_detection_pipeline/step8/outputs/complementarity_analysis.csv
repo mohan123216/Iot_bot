@@ -1,0 +1,11 @@
+detector_A,detector_B,intersection_count,union_count,jaccard_similarity,unique_to_A,unique_to_B,union_recall_pct
+Confidence (P<0.95),Mahalanobis,190,2444,0.0777,1075,1179,33.47
+Confidence (P<0.95),Relative Distance,436,2822,0.1545,829,1557,38.65
+Confidence (P<0.95),Leaf Novelty,967,1864,0.5188,298,599,25.53
+Confidence (P<0.95),kNN Novelty,279,1638,0.1703,986,373,22.43
+Mahalanobis,Relative Distance,914,2448,0.3734,455,1079,33.53
+Mahalanobis,Leaf Novelty,261,2674,0.0976,1108,1305,36.62
+Mahalanobis,kNN Novelty,490,1531,0.3201,879,162,20.97
+Relative Distance,Leaf Novelty,1021,2538,0.4023,972,545,34.76
+Relative Distance,kNN Novelty,242,2403,0.1007,1751,410,32.91
+Leaf Novelty,kNN Novelty,297,1921,0.1546,1269,355,26.31

@@ -1,0 +1,11 @@
+method,percentile,acceptance_rate,false_unknown_rate,normal_rejection_rate
+Leaf-Space Novelty,90.0,89.84,10.16,9.86
+Euclidean Leaf Distance,90.0,89.88,10.12,4.23
+Leaf-Space Novelty,95.0,94.8,5.2,7.04
+Euclidean Leaf Distance,95.0,95.0,5.0,1.41
+Leaf-Space Novelty,97.5,97.51,2.49,2.82
+Euclidean Leaf Distance,97.5,97.43,2.57,0.0
+Leaf-Space Novelty,99.0,98.88,1.12,1.41
+Euclidean Leaf Distance,99.0,99.04,0.96,0.0
+Leaf-Space Novelty,99.5,99.39,0.61,1.41
+Euclidean Leaf Distance,99.5,99.47,0.53,0.0

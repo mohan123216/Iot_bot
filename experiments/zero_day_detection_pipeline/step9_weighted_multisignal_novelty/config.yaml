@@ -1,0 +1,100 @@
+# Configuration for Step 9: Data-Driven Weighted Multi-Signal Adaptive Novelty Detection
+# Project: Robust Zero-Day Attack Detection with Open-Set Recognition
+
+experiment:
+  name: step9_weighted_multisignal_novelty
+  version: 1.0.0
+  random_seed: 42
+  date: "2026-10-03"
+
+paths:
+  model_path: "experiments/zero_day_detection_pipeline/models/xgboost_weighted_baseline.json"
+  class_mapping_path: "experiments/zero_day_detection_pipeline/models/class_mapping.json"
+  train_path: "experiments/zero_day_detection_pipeline/data/splits/train.parquet"
+  validation_path: "experiments/zero_day_detection_pipeline/data/splits/validation.parquet"
+  known_test_path: "experiments/zero_day_detection_pipeline/data/splits/known_test.parquet"
+  zeroday_test_path: "experiments/zero_day_detection_pipeline/data/splits/zeroday_test.parquet"
+  mahalanobis_stats_path: "experiments/zero_day_detection_pipeline/step4/distance_models/mahalanobis_class_statistics.pkl"
+  leaf_profiles_path: "experiments/zero_day_detection_pipeline/step5/leaf_models/leaf_class_profiles.pkl"
+
+features:
+  representation_a_xgboost:
+    - proto_number
+    - flgs_number
+    - state_number
+    - sport
+    - dport
+    - dur
+    - pkts
+    - bytes
+    - spkts
+    - dpkts
+    - sbytes
+    - dbytes
+    - rate
+    - srate
+    - drate
+    - mean
+    - stddev
+    - sum
+    - min
+    - max
+    - TnBPSrcIP
+    - TnBPDstIP
+    - TnP_PSrcIP
+    - TnP_PDstIP
+    - TnP_PerProto
+    - TnP_Per_Dport
+    - AR_P_Proto_P_SrcIP
+    - AR_P_Proto_P_DstIP
+    - N_IN_Conn_P_DstIP
+    - N_IN_Conn_P_SrcIP
+    - AR_P_Proto_P_Sport
+    - AR_P_Proto_P_Dport
+    - Pkts_P_State_P_Protocol_P_DestIP
+    - Pkts_P_State_P_Protocol_P_SrcIP
+
+  representation_b_geometry:
+    - proto_number
+    - flgs_number
+    - state_number
+    - dur
+    - pkts
+    - bytes
+    - spkts
+    - dpkts
+    - sbytes
+    - dbytes
+    - rate
+    - srate
+    - drate
+    - mean
+    - stddev
+    - sum
+    - min
+    - max
+    - TnBPSrcIP
+    - TnBPDstIP
+    - TnP_PSrcIP
+    - TnP_PDstIP
+    - TnP_PerProto
+    - N_IN_Conn_P_DstIP
+    - N_IN_Conn_P_SrcIP
+    - AR_P_Proto_P_SrcIP
+    - AR_P_Proto_P_DstIP
+    - Pkts_P_State_P_Protocol_P_DestIP
+    - Pkts_P_State_P_Protocol_P_SrcIP
+
+parameters:
+  epsilon: 1.0e-12
+  pseudo_unknown:
+    n_samples_per_generator: 1500
+    cross_class_lambdas: [0.25, 0.50, 0.75]
+    perturbation_sigmas: [1.5, 2.0]
+    extrapolation_gammas: [1.5, 2.0, 2.5]
+  weighting:
+    alpha_candidates: [0.3, 0.5, 0.7]
+    selected_alpha: 0.5
+  thresholds:
+    candidate_percentiles: [90.0, 95.0, 97.0, 98.0, 99.0, 99.5]
+    primary_percentile: 95.0

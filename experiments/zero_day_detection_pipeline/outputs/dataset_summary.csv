@@ -1,0 +1,13 @@
+metric,value
+Dataset Name,BoT-IoT (UNSW-2018-IoT-Botnet 5% Subset)
+Primary Domain,IoT Network Intrusion and Botnet Traffic
+Total Raw CSV Files,4
+Total File Size (Bytes),1017126825
+Total File Size (MB),970.01
+Total File Size (GB),0.947
+Total Network Flow Records,3668522
+Total Features / Columns,46
+Estimated In-Memory Footprint (Raw),1.26 GB
+Binary Label Field,"attack (0=Normal, 1=Attack)"
+Category Label Field,"category (DDoS, DoS, Reconnaissance, Normal, Theft)"
+Subcategory Label Field,"subcategory (UDP, TCP, Service_Scan, OS_Fingerprint, HTTP, Normal, Keylogging, Data_Exfiltration)"

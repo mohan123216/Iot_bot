@@ -1,0 +1,14 @@
+method_id,name,rule,val_acceptance,val_false_unknown,known_test_acceptance,known_test_false_unknown,benign_rejection_rate,known_attack_rejection_rate,zero_day_recall,unknown_precision,unknown_f1,detected_zd_count,missed_zd_count,fp_count,os_fingerprint_total,os_fingerprint_detected,os_fingerprint_recall
+1,Closed-Set XGBoost,Argmax (No Novelty),100.0,0.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0,7302,0,7040,0,0.0
+2,Confidence Only,P < 0.95,99.99,0.01,99.99,0.01,0.0,0.01,17.32,99.68,29.52,1265,6037,4,7040,1068,15.17
+3,Mahalanobis Only,D_c > tau_mah(c) [95%],94.99,5.01,95.08,4.92,1.41,4.93,18.75,33.97,24.16,1369,5933,2661,7040,1216,17.27
+4,Leaf Novelty (Class-Cond),L_arithmetic > tau_leaf(c) [95%],95.0,5.0,94.8,5.2,7.04,5.19,21.45,35.8,26.82,1566,5736,2808,7040,1318,18.72
+5,kNN Local Density Only,kNN_10 > tau_knn(c) [95%],94.99,5.01,92.89,7.11,7.04,7.11,8.93,14.51,11.05,652,6650,3843,7040,445,6.32
+6,Relative Class Distance Only,RelDist > tau_rel(c) [95%],94.99,5.01,95.12,4.88,7.04,4.88,27.29,43.05,33.41,1993,5309,2637,7040,1845,26.21
+7,Confidence + Mahalanobis (Step 6),P < 0.99 OR M > tau_m,94.98,5.02,95.06,4.94,2.82,4.94,41.22,52.99,46.37,3010,4292,2670,7040,2748,39.03
+8,Confidence + Relative Distance,P < 0.99 OR RelDist > tau_rel,94.98,5.02,95.1,4.9,8.45,4.89,39.63,52.23,45.07,2894,4408,2647,7040,2632,37.39
+8b,Confidence + Mah + RelDist,P < 0.99 OR M OR RelDist,94.24,5.76,94.36,5.64,9.86,5.63,45.77,52.32,48.82,3342,3960,3046,7040,3080,43.75
+9,Confidence + Mahalanobis + Leaf,P < 0.99 OR M OR Leaf,91.03,8.97,91.07,8.93,9.86,8.93,41.65,38.66,40.1,3041,4261,4825,7040,2779,39.47
+10,Confidence + RelDist + Leaf,P < 0.99 OR RelDist OR Leaf,91.05,8.95,91.08,8.92,15.49,8.91,39.7,37.55,38.6,2899,4403,4821,7040,2637,37.46
+11,Confidence + Mahalanobis + kNN,P < 0.99 OR M OR kNN,91.72,8.28,90.18,9.82,8.45,9.83,41.96,36.59,39.09,3064,4238,5309,7040,2802,39.8
+12,Full Proposed Hybrid (Step 8),Conf_99 | Mah | RelDist | Leaf | kNN,87.5,12.5,86.09,13.91,18.31,13.9,46.56,31.14,37.32,3400,3902,7517,7040,3138,44.57

@@ -1,0 +1,15 @@
+true_class,model,Data_Exfiltration,HTTP,Keylogging,Normal,OS_Fingerprint,TCP,UDP
+Data_Exfiltration,Baseline A (Unweighted),1,0,0,0,0,0,0
+HTTP,Baseline A (Unweighted),0,40,0,0,0,0,0
+Keylogging,Baseline A (Unweighted),0,0,9,1,1,0,0
+Normal,Baseline A (Unweighted),0,0,0,69,1,2,0
+OS_Fingerprint,Baseline A (Unweighted),0,0,1,1,263,1,0
+TCP,Baseline A (Unweighted),0,0,0,0,0,23901,0
+UDP,Baseline A (Unweighted),0,0,0,0,0,0,29751
+Data_Exfiltration,Baseline B (Weighted),1,0,0,0,0,0,0
+HTTP,Baseline B (Weighted),0,40,0,0,0,0,0
+Keylogging,Baseline B (Weighted),1,0,8,2,0,0,0
+Normal,Baseline B (Weighted),0,0,0,72,0,0,0
+OS_Fingerprint,Baseline B (Weighted),0,0,0,0,266,0,0
+TCP,Baseline B (Weighted),0,0,0,0,0,23901,0
+UDP,Baseline B (Weighted),0,0,0,0,0,0,29751

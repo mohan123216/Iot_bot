@@ -1,0 +1,25 @@
+method,percentile,threshold_value
+Calibrated OR Rule,90.0,0.9909927883233833
+Calibrated OR Rule,95.0,1.0814252787170469
+Calibrated OR Rule,97.5,1.2248754265837858
+Calibrated OR Rule,99.0,1.5218809876423316
+"Three-Signal (Equal (1/3, 1/3, 1/3))",90.0,0.2009164443464718
+"Three-Signal (Equal (1/3, 1/3, 1/3))",95.0,0.21987571106775808
+"Three-Signal (Equal (1/3, 1/3, 1/3))",97.5,0.24712375274139153
+"Three-Signal (Equal (1/3, 1/3, 1/3))",99.0,0.2751814152763408
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",90.0,0.2410669302295231
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",95.0,0.26371648905235606
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",97.5,0.29643719407084207
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",99.0,0.3298368455190179
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",90.0,0.2809705709367767
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",95.0,0.30098246643304977
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",97.5,0.3304237523141598
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",99.0,0.36691212886779073
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",90.0,0.2711797946445401
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",95.0,0.29666965646948634
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",97.5,0.33340180933499114
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",99.0,0.37094414844862433
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",90.0,0.18084120139948917
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",95.0,0.19791078567536222
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",97.5,0.22244529747246897
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",99.0,0.24783296469256635

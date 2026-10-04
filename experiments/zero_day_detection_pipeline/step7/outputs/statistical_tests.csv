@@ -1,0 +1,13 @@
+comparison,sample_size,d1_detections,d2_detections,d1_only (b),d2_only (c),both (a),neither (d),mcnemar_chi2,p_value,statistically_significant_p001,effect_direction
+Confidence+Mahalanobis (P<0.99) vs Closed-Set XGBoost,7302,3010,0,3010,0,0,4292,3008.0003,0.0000e+00,True,D1 > D2 (+3010 flows)
+Confidence+Mahalanobis (P<0.99) vs Confidence Only (P<0.95),7302,3010,1265,1745,0,1265,4292,1743.0006,0.0000e+00,True,D1 > D2 (+1745 flows)
+Confidence+Mahalanobis (P<0.99) vs Mahalanobis Only,7302,3010,1369,1641,0,1369,4292,1639.0006,0.0000e+00,True,D1 > D2 (+1641 flows)
+Confidence+Mahalanobis (P<0.99) vs Leaf Novelty Only,7302,3010,1566,1475,31,1535,4261,1382.6355,1.2468e-302,True,D1 > D2 (+1444 flows)
+Confidence+Mahalanobis (P<0.99) vs Mahalanobis+Leaf OR,7302,3010,2674,367,31,2643,4261,281.9724,2.7912e-63,True,D1 > D2 (+336 flows)
+Mahalanobis+Leaf OR vs Closed-Set XGBoost,7302,2674,0,2674,0,0,4628,2672.0004,0.0000e+00,True,D1 > D2 (+2674 flows)
+Mahalanobis+Leaf OR vs Confidence Only (P<0.95),7302,2674,1265,1705,296,969,4332,990.7366,1.8527e-217,True,D1 > D2 (+1409 flows)
+Mahalanobis+Leaf OR vs Mahalanobis Only,7302,2674,1369,1305,0,1369,4628,1303.0008,2.5183e-285,True,D1 > D2 (+1305 flows)
+Mahalanobis+Leaf OR vs Leaf Novelty Only,7302,2674,1566,1108,0,1566,4628,1106.0009,1.6392e-242,True,D1 > D2 (+1108 flows)
+Three-Signal (95%) vs Closed-Set XGBoost,7302,1918,0,1918,0,0,5384,1916.0005,0.0000e+00,True,D1 > D2 (+1918 flows)
+Three-Signal (95%) vs Mahalanobis Only,7302,1918,1369,1554,1005,364,4379,117.3521,2.4037e-27,True,D1 > D2 (+549 flows)
+Three-Signal (95%) vs Leaf Novelty Only,7302,1918,1566,352,0,1566,5384,350.0028,4.2318e-78,True,D1 > D2 (+352 flows)

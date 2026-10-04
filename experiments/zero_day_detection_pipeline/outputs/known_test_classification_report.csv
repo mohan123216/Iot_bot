@@ -1,0 +1,15 @@
+model,split,class,class_index,precision,recall,f1_score,support
+Baseline A (Unweighted),Known Test,Data_Exfiltration,0,1.0,1.0,1.0,1
+Baseline A (Unweighted),Known Test,HTTP,1,1.0,1.0,1.0,40
+Baseline A (Unweighted),Known Test,Keylogging,2,1.0,0.9090909090909091,0.9523809523809523,11
+Baseline A (Unweighted),Known Test,Normal,3,0.9859154929577465,0.9859154929577465,0.9859154929577465,71
+Baseline A (Unweighted),Known Test,OS_Fingerprint,4,0.996268656716418,1.0,0.9981308411214953,267
+Baseline A (Unweighted),Known Test,TCP,5,1.0,1.0,1.0,23901
+Baseline A (Unweighted),Known Test,UDP,6,1.0,1.0,1.0,29752
+Baseline B (Weighted),Known Test,Data_Exfiltration,0,1.0,1.0,1.0,1
+Baseline B (Weighted),Known Test,HTTP,1,1.0,1.0,1.0,40
+Baseline B (Weighted),Known Test,Keylogging,2,1.0,0.9090909090909091,0.9523809523809523,11
+Baseline B (Weighted),Known Test,Normal,3,0.9861111111111112,1.0,0.993006993006993,71
+Baseline B (Weighted),Known Test,OS_Fingerprint,4,1.0,1.0,1.0,267
+Baseline B (Weighted),Known Test,TCP,5,1.0,1.0,1.0,23901
+Baseline B (Weighted),Known Test,UDP,6,1.0,1.0,1.0,29752

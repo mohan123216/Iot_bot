@@ -1,0 +1,31 @@
+{
+  "known_classes": [
+    "Data_Exfiltration",
+    "HTTP",
+    "Keylogging",
+    "Normal",
+    "OS_Fingerprint",
+    "TCP",
+    "UDP"
+  ],
+  "class_to_idx": {
+    "Data_Exfiltration": 0,
+    "HTTP": 1,
+    "Keylogging": 2,
+    "Normal": 3,
+    "OS_Fingerprint": 4,
+    "TCP": 5,
+    "UDP": 6
+  },
+  "idx_to_class": {
+    "0": "Data_Exfiltration",
+    "1": "HTTP",
+    "2": "Keylogging",
+    "3": "Normal",
+    "4": "OS_Fingerprint",
+    "5": "TCP",
+    "6": "UDP"
+  },
+  "zero_day_class": "Service_Scan",
+  "num_classes": 7
+}

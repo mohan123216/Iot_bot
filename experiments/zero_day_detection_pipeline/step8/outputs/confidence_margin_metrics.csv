@@ -1,0 +1,4 @@
+confidence_metric,val_p50,val_p95_threshold,zd_p50,zd_recall
+Maximum Class Probability (P_max),0.9999,0.9999,0.9985,17.32
+Probability Margin Novelty (1 - (P_top1 - P_top2)),0.0001,0.0002,0.002,61.37
+Softmax Entropy H(P),0.001,0.0019,0.0131,61.37

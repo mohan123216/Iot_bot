@@ -1,0 +1,5 @@
+Method,Zero-Day Recall (%),Unknown Precision (%),Unknown F1 (%),Known Acceptance (%),Benign Rejection (%),Detected ZD Flows,Decision Rule
+Confidence + Mahalanobis OR (Step 6),41.22,52.99,46.37,95.06,2.82,3010,P < 0.99 OR M_norm > 1.0
+Mahalanobis + Leaf OR (Step 6),36.62,35.67,36.14,91.08,7.04,2674,M_norm > 1.0 OR L_norm > 1.0
+Conf + Mah + RelDist (Step 8),45.77,52.32,48.82,94.36,9.86,3342,P < 0.99 OR M_norm > 1 OR Rel_norm > 1
+New Weighted Unified Score (P95.0),32.94,46.71,38.63,94.92,1.41,2405,S_unified > tau_S(c) [Adaptive]

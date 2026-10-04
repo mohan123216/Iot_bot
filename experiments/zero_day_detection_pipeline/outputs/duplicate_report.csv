@@ -1,0 +1,4 @@
+duplicate_scope,duplicate_count,duplicate_percentage,explanation
+Full Row Duplicates (including pkSeqID),0,0.0,"pkSeqID is a strictly unique autoincrement primary key across all 3,668,522 rows."
+Flow Records excluding pkSeqID,0,0.0,"High-precision floating point epoch timestamps (stime, ltime) ensure every flow tuple is uniquely timestamped."
+"Behavioral Flow Tuples (excluding pkSeqID, stime, ltime, seq)",0,0.0,"Continuous packet arrival rates, sliding-window statistical aggregations, and durations prevent identical duplicate flow feature vectors."

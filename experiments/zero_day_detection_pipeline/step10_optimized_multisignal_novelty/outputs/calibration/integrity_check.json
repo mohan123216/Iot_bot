@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "zero_day_class": "Service_Scan",
+  "quarantine_verified": true,
+  "dataset_counts": {
+    "train": 252198,
+    "validation": 54042,
+    "known_test": 54043,
+    "zeroday_test": 7302
+  },
+  "zero_day_counts": {
+    "train": 0,
+    "validation": 0,
+    "known_test": 0,
+    "zeroday_test": 7302
+  },
+  "models": {
+    "xgboost_trees": 700,
+    "mahalanobis_classes": 7,
+    "leaf_classes": 7
+  }
+}

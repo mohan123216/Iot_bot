@@ -1,0 +1,8 @@
+class,train_count,train_percentage,majority_to_class_ratio,imbalance_severity
+UDP,138841,55.0524,1.0,Baseline Majority
+TCP,111538,44.2264,1.24,Balanced / High Support
+OS_Fingerprint,1244,0.4933,111.61,Moderate Imbalance
+Normal,334,0.1324,415.69,Severe Imbalance
+HTTP,186,0.0738,746.46,Severe Imbalance
+Keylogging,51,0.0202,2722.37,Extreme Imbalance
+Data_Exfiltration,4,0.0016,34710.25,Extreme Imbalance

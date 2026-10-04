@@ -1,0 +1,8 @@
+Class,Total Flows,Accepted as Known,Rejected as Unknown,Acceptance Rate (%)
+Data_Exfiltration,1,1,0,100.0
+HTTP,40,38,2,95.0
+Keylogging,11,9,2,81.82
+Normal,71,68,3,95.77
+OS_Fingerprint,267,259,8,97.0
+TCP,23901,22712,1189,95.03
+UDP,29752,28254,1498,94.97

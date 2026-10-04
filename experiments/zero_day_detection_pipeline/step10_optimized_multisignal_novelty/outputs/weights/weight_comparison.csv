@@ -1,0 +1,5 @@
+Strategy,wC,wM,wL,wR,Known Acceptance (%),Benign False Alarms,F1 Balanced (%),F1 Hard (%),AUROC Balanced,Redundancy Penalty,Objective J
+Baseline A: Equal Weights,0.25,0.25,0.25,0.25,94.99,4,33.42,44.17,0.7947,0.225,0.6537
+Baseline B: Step 9 Historical AUC Weights,0.7353,0.2099,0.0,0.0548,94.99,4,39.54,47.06,0.9106,0.0991,0.7729
+Baseline C: Old Step 10 (Confidence Only Collapse),1.0,0.0,0.0,0.0,95.02,2,45.53,48.73,0.987,0.0,0.8727
+Step 10 NEW Method: Learned Constrained Four-Signal,0.71,0.05,0.05,0.19,95.0,2,39.6,45.59,0.9032,0.1138,0.7643

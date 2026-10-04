@@ -1,0 +1,14 @@
+metric,value,description
+Macro Zero-Day Recall (%),61.55,Unweighted arithmetic average of zero-day recall across all 7 attack classes
+Macro Unknown Precision (%),37.82,Unweighted arithmetic average of unknown detection precision
+Macro Unknown F1 (%),38.32,Unweighted arithmetic average of unknown F1 score
+Micro Zero-Day Recall (%),98.16,"Aggregate zero-day detection rate across all 367,108 held-out flows"
+Recall Standard Deviation (%),37.49,Cross-attack variation in zero-day detection recall
+Median Recall (%),67.12,Median detection rate across attack classes
+Minimum Recall (Hardest Attack) (%),6.7,Lowest detection rate: OS_Fingerprint
+Maximum Recall (Easiest Attack) (%),100.0,Highest detection rate: UDP
+Coverage > 10%,6/7 (85.7%),Attacks with Zero-Day Recall > 10%
+Coverage > 20%,5/7 (71.4%),Attacks with Zero-Day Recall > 20%
+Coverage > 30%,5/7 (71.4%),Attacks with Zero-Day Recall > 30%
+Coverage > 40%,5/7 (71.4%),Attacks with Zero-Day Recall > 40%
+Coverage > 50%,4/7 (57.1%),Attacks with Zero-Day Recall > 50%

@@ -1,0 +1,86 @@
+{
+  "P90.0": {
+    "percentile": 90.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 3115,
+    "missed_zero_day": 4187,
+    "zero_day_recall_pct": 42.66,
+    "false_positives_known_test": 5374,
+    "unknown_precision_pct": 36.69,
+    "unknown_f1_score_pct": 39.45,
+    "known_test_acceptance_pct": 90.06,
+    "benign_rejection_pct": 7.04
+  },
+  "P92.0": {
+    "percentile": 92.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 2953,
+    "missed_zero_day": 4349,
+    "zero_day_recall_pct": 40.44,
+    "false_positives_known_test": 4300,
+    "unknown_precision_pct": 40.71,
+    "unknown_f1_score_pct": 40.58,
+    "known_test_acceptance_pct": 92.04,
+    "benign_rejection_pct": 5.63
+  },
+  "P95.0": {
+    "percentile": 95.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 2895,
+    "missed_zero_day": 4407,
+    "zero_day_recall_pct": 39.65,
+    "false_positives_known_test": 2702,
+    "unknown_precision_pct": 51.72,
+    "unknown_f1_score_pct": 44.89,
+    "known_test_acceptance_pct": 95.0,
+    "benign_rejection_pct": 4.23
+  },
+  "P97.0": {
+    "percentile": 97.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 2390,
+    "missed_zero_day": 4912,
+    "zero_day_recall_pct": 32.73,
+    "false_positives_known_test": 1698,
+    "unknown_precision_pct": 58.46,
+    "unknown_f1_score_pct": 41.97,
+    "known_test_acceptance_pct": 96.86,
+    "benign_rejection_pct": 4.23
+  },
+  "P98.0": {
+    "percentile": 98.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 2123,
+    "missed_zero_day": 5179,
+    "zero_day_recall_pct": 29.07,
+    "false_positives_known_test": 1142,
+    "unknown_precision_pct": 65.02,
+    "unknown_f1_score_pct": 40.18,
+    "known_test_acceptance_pct": 97.89,
+    "benign_rejection_pct": 2.82
+  },
+  "P99.0": {
+    "percentile": 99.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 1334,
+    "missed_zero_day": 5968,
+    "zero_day_recall_pct": 18.27,
+    "false_positives_known_test": 613,
+    "unknown_precision_pct": 68.52,
+    "unknown_f1_score_pct": 28.85,
+    "known_test_acceptance_pct": 98.87,
+    "benign_rejection_pct": 1.41
+  },
+  "P99.5": {
+    "percentile": 99.5,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 1169,
+    "missed_zero_day": 6133,
+    "zero_day_recall_pct": 16.01,
+    "false_positives_known_test": 295,
+    "unknown_precision_pct": 79.85,
+    "unknown_f1_score_pct": 26.67,
+    "known_test_acceptance_pct": 99.45,
+    "benign_rejection_pct": 1.41
+  }
+}

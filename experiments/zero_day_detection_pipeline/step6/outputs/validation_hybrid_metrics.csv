@@ -1,0 +1,33 @@
+method,threshold_spec,acceptance_rate,false_unknown_rate,benign_rejection_rate,known_attack_rejection_rate
+Mahalanobis + Leaf OR,Fixed (tau=1.0),91.04,8.96,9.72,8.96
+Mahalanobis + Leaf AND,Fixed (tau=1.0),98.95,1.05,1.39,1.05
+Mahalanobis + Leaf OR (Calibrated),Validation 90.0%,90.02,9.98,9.72,9.98
+Mahalanobis + Leaf OR (Calibrated),Validation 95.0%,95.0,5.0,5.56,5.0
+Mahalanobis + Leaf OR (Calibrated),Validation 97.5%,97.5,2.5,2.78,2.5
+Mahalanobis + Leaf OR (Calibrated),Validation 99.0%,99.0,1.0,1.39,1.0
+Confidence + Mahalanobis,Conf < 0.90 | M > 1.0,94.99,5.01,6.94,5.01
+Confidence + Mahalanobis,Conf < 0.95 | M > 1.0,94.99,5.01,6.94,5.01
+Confidence + Mahalanobis,Conf < 0.99 | M > 1.0,94.98,5.02,11.11,5.01
+Confidence + Leaf Novelty,Conf < 0.90 | L > 1.0,94.98,5.02,6.94,5.01
+Confidence + Leaf Novelty,Conf < 0.95 | L > 1.0,94.98,5.02,6.94,5.02
+Confidence + Leaf Novelty,Conf < 0.99 | L > 1.0,94.97,5.03,12.5,5.03
+"Three-Signal (Equal (1/3, 1/3, 1/3))",Validation 90.0%,90.08,9.92,13.89,9.92
+"Three-Signal (Equal (1/3, 1/3, 1/3))",Validation 95.0%,95.0,5.0,11.11,4.99
+"Three-Signal (Equal (1/3, 1/3, 1/3))",Validation 97.5%,97.5,2.5,8.33,2.49
+"Three-Signal (Equal (1/3, 1/3, 1/3))",Validation 99.0%,99.0,1.0,0.0,1.0
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",Validation 90.0%,90.07,9.93,13.89,9.92
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",Validation 95.0%,95.0,5.0,8.33,5.0
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",Validation 97.5%,97.5,2.5,6.94,2.5
+"Three-Signal (Novelty-Heavy (0.2, 0.4, 0.4))",Validation 99.0%,99.0,1.0,0.0,1.0
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",Validation 90.0%,90.0,10.0,12.5,10.0
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",Validation 95.0%,95.0,5.0,8.33,5.0
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",Validation 97.5%,97.5,2.5,5.56,2.5
+"Three-Signal (Leaf-Heavy (0.2, 0.3, 0.5))",Validation 99.0%,99.0,1.0,0.0,1.0
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",Validation 90.0%,90.06,9.94,12.5,9.93
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",Validation 95.0%,95.0,5.0,8.33,5.0
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",Validation 97.5%,97.5,2.5,6.94,2.5
+"Three-Signal (Geometry-Tree Focus (0.1, 0.45, 0.45))",Validation 99.0%,99.0,1.0,0.0,1.0
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",Validation 90.0%,90.08,9.92,13.89,9.92
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",Validation 95.0%,95.0,5.0,11.11,4.99
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",Validation 97.5%,97.5,2.5,8.33,2.49
+"Three-Signal (Confidence-Heavy (0.4, 0.3, 0.3))",Validation 99.0%,99.0,1.0,1.39,1.0
