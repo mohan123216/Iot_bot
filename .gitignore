@@ -48,10 +48,16 @@ Thumbs.db
 # Raw UNSW Bot-IoT dataset files
 UNSW_2018_IoT_Botnet_Full5pc*.csv
 UNSW_*.csv
+data_*.csv
+data_names.csv
 *.pcap
 *.pcapng
 *.tar.gz
 *.zip
+
+# Full dataset implementation parquet
+fulldataset_implementation/data/*
+!fulldataset_implementation/data/.gitkeep
 
 # Preprocessed and split dataset files
 experiments/zero_day_detection_pipeline/data/cleaned/*

@@ -1,0 +1,9 @@
+subcategory,role,raw_total_count,raw_percentage,sample_count,sample_percentage,retention_rate_pct
+UDP,Attack Class,39624597,54.0062,79136,25.8097,0.2
+TCP,Attack Class,31863600,43.4284,80222,26.1639,0.25
+Service_Scan,Attack Class,1463364,1.9945,50885,16.5958,3.48
+OS_Fingerprint,Attack Class,358275,0.4883,35763,11.6639,9.98
+HTTP,Attack Class,49477,0.0674,49477,16.1366,100.0
+Normal,Benign Control,9543,0.013,9543,3.1124,100.0
+Keylogging,Attack Class,1469,0.002,1469,0.4791,100.0
+Data_Exfiltration,Attack Class,118,0.0002,118,0.0385,100.0
