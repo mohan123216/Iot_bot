@@ -1,0 +1,8 @@
+heldout_attack,total_test_samples,zero_day_samples,known_test_samples,true_positives_tp,false_negatives_fn,false_positives_fp,true_negatives_tn,accuracy_pct,precision_pct,recall_pct,f1_score_pct,error_rate_pct,execution_time_sec
+Data_Exfiltration,9270,118,9152,11,107,598,8554,92.39,1.81,9.32,3.03,7.61,12.6
+HTTP,17670,10000,7670,9982,18,493,7177,97.11,95.29,99.82,97.5,2.89,11.7
+Keylogging,10419,1469,8950,159,1310,564,8386,82.01,21.99,10.82,14.51,17.99,9.9
+OS_Fingerprint,17670,10000,7670,1027,8973,537,7133,46.18,65.66,10.27,17.76,53.82,11.6
+Service_Scan,17670,10000,7670,1112,8888,516,7154,46.78,68.3,11.12,19.13,53.22,25.0
+TCP,17670,10000,7670,9994,6,545,7125,96.88,94.83,99.94,97.32,3.12,61.7
+UDP,17670,10000,7670,7506,2494,532,7138,82.87,93.38,75.06,83.22,17.13,63.3

@@ -1,0 +1,8 @@
+heldout_attack,overall_accuracy_pct,normal_samples,normal_precision_pct,normal_recall_pct,normal_f1_pct,normal_error_rate_pct,known_attack_samples,known_attack_precision_pct,known_attack_recall_pct,known_attack_f1_pct,known_attack_error_rate_pct,zero_day_samples,zero_day_precision_pct,zero_day_recall_pct,zero_day_f1_pct,zero_day_error_rate_pct,zero_day_threat_catch_rate_pct,zero_day_threat_miss_rate_pct
+Data_Exfiltration,91.96,1431,99.62,91.89,95.6,8.11,7721,98.74,93.07,95.82,6.93,118,3.57,20.34,6.08,79.66,98.31,1.69
+HTTP,96.8,1432,99.41,93.37,96.29,6.63,6238,99.88,92.69,96.15,7.31,10000,94.77,99.85,97.24,0.15,99.92,0.08
+Keylogging,82.46,1432,99.7,93.99,96.76,6.01,7518,85.4,92.7,88.9,7.3,1469,30.36,18.79,23.21,81.21,99.86,0.14
+OS_Fingerprint,45.99,1432,99.48,92.74,95.99,7.26,6238,39.16,92.47,55.01,7.53,10000,64.28,10.31,17.77,89.69,99.94,0.06
+Service_Scan,46.8,1432,82.72,93.92,87.97,6.08,6238,40.31,93.24,56.28,6.76,10000,68.61,11.08,19.08,88.92,97.21,2.79
+TCP,97.02,1432,99.93,93.3,96.5,6.7,6238,100.0,93.09,96.42,6.91,10000,95.0,100.0,97.44,0.0,100.0,0.0
+UDP,43.37,1432,12.43,94.06,21.96,5.94,6238,99.97,93.06,96.39,6.94,10000,49.76,5.12,9.28,94.88,5.14,94.86

@@ -1,0 +1,11 @@
+Class,Subclass,Test_Attack_Flows,Test_Normal_Flows,Precision,Recall,Accuracy,F1,Error
+DoS,HTTP,5960,2863,1.0,1.0,1.0,1.0,0.0
+DoS,TCP,3846,2863,1.0,1.0,1.0,1.0,0.0
+DoS,UDP,5239,2863,1.0,1.0,1.0,1.0,0.0
+DDoS,HTTP,4040,2863,1.0,1.0,1.0,1.0,0.0
+DDoS,TCP,6154,2863,1.0,1.0,1.0,1.0,0.0
+DDoS,UDP,4761,2863,1.0,1.0,1.0,1.0,0.0
+Reconnaissance,OS_Fingerprint,10000,2863,1.0,0.99,0.99,1.0,0.01
+Reconnaissance,Service_Scan,10000,2863,1.0,0.95,0.96,0.97,0.04
+Theft,Keylogging,1469,2863,1.0,0.99,0.99,0.99,0.01
+Theft,Data_Exfiltration,118,2863,0.97,0.93,1.0,0.95,0.0

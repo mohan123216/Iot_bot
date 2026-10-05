@@ -1,14 +1,14 @@
 {
-  "macro_zero_day_recall_pct": 33.76,
-  "micro_zero_day_recall_pct": 47.4,
-  "macro_false_alarm_rate_pct": 5.17,
-  "micro_false_alarm_rate_pct": 5.17,
-  "macro_known_attack_acceptance_pct": 95.0,
-  "macro_known_attack_classification_acc_pct": 98.9,
-  "macro_open_set_auroc_pct": 79.63,
-  "macro_open_set_auprc_pct": 57.73,
-  "macro_zero_day_f1_score_pct": 35.57,
-  "macro_balanced_accuracy_pct": 64.37,
-  "total_zero_day_flows_evaluated": 297070,
-  "total_zero_day_flows_detected": 140811
+  "macro_zero_day_recall_pct": 33.87,
+  "micro_zero_day_recall_pct": 42.03,
+  "macro_false_alarm_rate_pct": 5.38,
+  "micro_false_alarm_rate_pct": 5.38,
+  "macro_known_attack_acceptance_pct": 94.64,
+  "macro_known_attack_classification_acc_pct": 98.95,
+  "macro_open_set_auroc_pct": 74.12,
+  "macro_open_set_auprc_pct": 58.44,
+  "macro_zero_day_f1_score_pct": 35.74,
+  "macro_balanced_accuracy_pct": 64.25,
+  "total_zero_day_flows_evaluated": 51587,
+  "total_zero_day_flows_detected": 21684
 }

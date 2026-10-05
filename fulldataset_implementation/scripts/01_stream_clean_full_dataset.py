@@ -137,6 +137,17 @@ def run_stream_cleaning():
     print("\nAggregating cleaned full-dataset representative sample...")
     df_clean_sample = pd.concat(cleaned_sample_chunks, ignore_index=True)
 
+    if "target_class_cap" in cfg.get("dataset_sampling", {}):
+        cap = int(cfg["dataset_sampling"]["target_class_cap"])
+        print(f"Applying target class quota cap of {cap:,} flows per class...")
+        capped_chunks = []
+        for sc, grp in df_clean_sample.groupby("subcategory"):
+            if len(grp) > cap:
+                capped_chunks.append(grp.sample(n=cap, random_state=rand_seed))
+            else:
+                capped_chunks.append(grp)
+        df_clean_sample = pd.concat(capped_chunks, ignore_index=True)
+
     # Save cleaned sample
     out_sample_path = cfg["paths"]["cleaned_sample_path"]
     df_clean_sample.to_parquet(out_sample_path, index=False)

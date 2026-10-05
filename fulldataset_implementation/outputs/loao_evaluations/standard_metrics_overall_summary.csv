@@ -1,0 +1,5 @@
+category,total_samples,accuracy_or_acceptance_pct,precision_pct,recall_pct,f1_score_pct,error_rate_pct,interpretation
+Normal Traffic (Benign),10023,93.33,48.85,93.33,64.13,6.67,Innocent traffic safely accepted; only 6.68% false alarm error.
+Known Attack Traffic,46429,92.9,69.57,92.9,79.56,7.1,High fidelity closed-set interception; <7.5% error.
+Zero-Day Attack (Pure Anomaly),51587,44.46,85.29,44.46,58.45,55.54,Flagged strictly as an uncharacterized 'Unknown Alien' anomaly.
+Zero-Day Attack (Threat-Aware Catch),51587,81.04,91.36,81.04,85.89,18.96,Operational catch: Stopped as Zero-Day Anomaly OR Known Attack Vector.
