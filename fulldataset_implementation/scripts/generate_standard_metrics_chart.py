@@ -187,14 +187,14 @@ def generate_standard_metrics_visuals():
     known_csv = os.path.join(OUTPUTS_DIR, "audit_reports", "known_attack_multiclass_metrics.csv")
     if os.path.exists(known_csv):
         df_k = pd.read_csv(known_csv)
-        fig2, ax_k = plt.subplots(figsize=(15, 7.5), dpi=300)
+        fig2, ax_k = plt.subplots(figsize=(19, 6.8), dpi=300)
         fig2.patch.set_facecolor('#ffffff')
         ax_k.axis('off')
 
         k_cell_data = []
         for _, r in df_k.iterrows():
             k_cell_data.append([
-                r['Class_Name'],
+                f"  {r['Class_Name']}",
                 f"{int(r['Test_Samples']):,}",
                 f"{int(r['Correctly_Classified_TP']):,}",
                 f"{int(r['Misclassified_FN']):,}",
@@ -206,24 +206,30 @@ def generate_standard_metrics_visuals():
             ])
 
         col_k = ["Traffic Class Name", "Test Flows", "TP", "FN", "Accuracy", "Precision", "Recall", "F1-Score", "Error Rate"]
-        tbl_known = ax_k.table(cellText=k_cell_data, colLabels=col_k, loc='center', cellLoc='center')
+        # Custom column widths ensuring long class names like 'Reconnaissance - OS_Fingerprint' have ample space
+        col_widths = [0.25, 0.09, 0.08, 0.08, 0.10, 0.10, 0.10, 0.10, 0.10]
+        tbl_known = ax_k.table(cellText=k_cell_data, colLabels=col_k, colWidths=col_widths, loc='center', cellLoc='center')
         tbl_known.auto_set_font_size(False)
         tbl_known.set_fontsize(10)
-        tbl_known.scale(1.0, 1.8)
+        tbl_known.scale(1.0, 2.0)
 
         for (r, c), cell in tbl_known.get_celld().items():
             cell.set_edgecolor('#cbd5e1')
             if r == 0:
                 cell.set_facecolor('#1e293b')
-                cell.set_text_props(color='#ffffff', weight='bold')
+                cell.set_text_props(color='#ffffff', weight='bold', ha='center')
             else:
                 bg = '#f8fafc' if r % 2 == 0 else '#ffffff'
                 cell.set_facecolor(bg)
-                if c in [4, 5, 6, 7]:
-                    cell.set_text_props(color='#047857', weight='bold')
+                if c == 0:
+                    cell.set_text_props(weight='bold', color='#1e293b', ha='left')
+                elif c in [4, 5, 6, 7]:
+                    cell.set_text_props(color='#047857', weight='bold', ha='center')
+                else:
+                    cell.set_text_props(ha='center')
 
         ax_k.set_title("Known Traffic Multiclass Classification: 5 Standard Metrics\n(Strict 70% Train / 30% Test Partition, 18,339 Test Flows, Zero Leakage)", 
-                       fontsize=13, weight='bold', pad=15, color='#0f172a')
+                       fontsize=13, weight='bold', pad=18, color='#0f172a')
 
         plt.tight_layout()
         fig2_path = os.path.join(PLOTS_DIR, "known_multiclass_standard_metrics_table.png")
