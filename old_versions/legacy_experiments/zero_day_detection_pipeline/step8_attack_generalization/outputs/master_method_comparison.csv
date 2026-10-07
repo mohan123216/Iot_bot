@@ -1,0 +1,8 @@
+Held-Out Attack,Sample Count,Confidence Recall,Mahalanobis Recall,Leaf Recall,Confidence+Mahalanobis Recall,Mahalanobis+Leaf Recall,Three-Signal Recall,Confidence+Mahalanobis Precision,Confidence+Mahalanobis F1,Known Acceptance,Normal Rejection,Missed by All
+Data_Exfiltration,6,16.67,16.67,16.67,16.67,16.67,16.67,0.03,0.06,94.22,2.78,5
+HTTP,266,72.56,80.08,83.83,99.62,99.62,99.62,8.08,14.95,94.53,6.94,1
+Keylogging,73,8.22,31.51,24.66,67.12,31.51,67.12,1.54,3.02,94.33,2.78,49
+OS_Fingerprint,1777,1.63,3.21,0.39,6.7,3.43,6.81,4.2,5.16,95.06,14.08,1693
+Service_Scan,7302,17.32,18.75,21.45,41.22,36.62,41.65,52.99,46.37,95.06,2.82,4332
+TCP,159340,62.41,47.58,59.91,99.52,78.01,99.52,98.78,99.15,93.71,9.72,13077
+UDP,198344,6.54,99.28,88.65,100.0,99.3,100.0,99.13,99.56,93.15,7.04,36

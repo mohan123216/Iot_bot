@@ -1,0 +1,16 @@
+label_level,class_name,sample_count,percentage,is_majority,is_minority,imbalance_ratio_vs_minority
+Binary (attack),Attack (1),3668045,99.987,True,False,7689.82
+Binary (attack),Normal (0),477,0.013,False,True,7689.82
+Category (category),DDoS,1926624,52.5177,True,False,24387.65
+Category (category),DoS,1650260,44.9843,False,False,24387.65
+Category (category),Reconnaissance,91082,2.4828,False,False,24387.65
+Category (category),Normal,477,0.013,False,False,24387.65
+Category (category),Theft,79,0.0022,False,True,24387.65
+Subcategory (subcategory),UDP,1981230,54.0062,True,False,330205.0
+Subcategory (subcategory),TCP,1593180,43.4284,False,False,330205.0
+Subcategory (subcategory),Service_Scan,73168,1.9945,False,False,330205.0
+Subcategory (subcategory),OS_Fingerprint,17914,0.4883,False,False,330205.0
+Subcategory (subcategory),HTTP,2474,0.0674,False,False,330205.0
+Subcategory (subcategory),Normal,477,0.013,False,False,330205.0
+Subcategory (subcategory),Keylogging,73,0.002,False,False,330205.0
+Subcategory (subcategory),Data_Exfiltration,6,0.0002,False,True,330205.0

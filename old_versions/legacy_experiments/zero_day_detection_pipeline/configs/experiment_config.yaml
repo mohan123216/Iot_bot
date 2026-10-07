@@ -1,0 +1,108 @@
+# Experiment Configuration: Step 2 — Leakage-Free Train/Val/Test Splitting & Zero-Day Holdout
+# Project: Zero-Day Attack Detection Pipeline
+# Author: Google DeepMind Antigravity Team
+# Date: 2026-10-03
+
+dataset:
+  name: bot_iot
+  cleaned_data_path: data/cleaned/bot_iot_cleaned_sample.parquet
+  cleaned_csv_path: data/cleaned/bot_iot_cleaned_sample.csv
+  label_column: subcategory
+  category_column: category
+  binary_column: attack
+
+split:
+  train_ratio: 0.70
+  validation_ratio: 0.15
+  known_test_ratio: 0.15
+  random_state: 42
+  stratify: true
+
+zero_day:
+  class: Service_Scan
+  selection_rationale: "Highest-sample fine-grained reconnaissance attack class (7,302 flows in sample, 73,168 in full dataset), providing statistically rigorous independent evaluation while simulating port/service discovery zero-day activity against volumetric flooding baselines."
+  candidate_classes:
+    - Service_Scan
+    - OS_Fingerprint
+    - HTTP
+    - Keylogging
+    - Data_Exfiltration
+
+features:
+  excluded:
+    - saddr
+    - daddr
+    - stime
+    - ltime
+    - pkSeqID
+    - seq
+    - attack
+    - category
+    - subcategory
+
+  representation_a_xgboost:
+    - proto_number
+    - flgs_number
+    - state_number
+    - sport
+    - dport
+    - dur
+    - pkts
+    - bytes
+    - spkts
+    - dpkts
+    - sbytes
+    - dbytes
+    - rate
+    - srate
+    - drate
+    - mean
+    - stddev
+    - sum
+    - min
+    - max
+    - TnBPSrcIP
+    - TnBPDstIP
+    - TnP_PSrcIP
+    - TnP_PDstIP
+    - TnP_PerProto
+    - TnP_Per_Dport
+    - AR_P_Proto_P_SrcIP
+    - AR_P_Proto_P_DstIP
+    - N_IN_Conn_P_DstIP
+    - N_IN_Conn_P_SrcIP
+    - AR_P_Proto_P_Sport
+    - AR_P_Proto_P_Dport
+    - Pkts_P_State_P_Protocol_P_DestIP
+    - Pkts_P_State_P_Protocol_P_SrcIP
+
+  representation_b_geometry:
+    - proto_number
+    - flgs_number
+    - state_number
+    - dur
+    - pkts
+    - bytes
+    - spkts
+    - dpkts
+    - sbytes
+    - dbytes
+    - rate
+    - srate
+    - drate
+    - mean
+    - stddev
+    - sum
+    - min
+    - max
+    - TnBPSrcIP
+    - TnBPDstIP
+    - TnP_PSrcIP
+    - TnP_PDstIP
+    - TnP_PerProto
+    - N_IN_Conn_P_DstIP
+    - N_IN_Conn_P_SrcIP
+    - AR_P_Proto_P_SrcIP
+    - AR_P_Proto_P_DstIP
+    - Pkts_P_State_P_Protocol_P_DestIP
+    - Pkts_P_State_P_Protocol_P_SrcIP

@@ -1,0 +1,4 @@
+Method,wC (Confidence),wM (Mahalanobis),wL (Leaf Space),wR (Relative Distance)
+Equal Baseline,0.25,0.25,0.25,0.25
+AUC-Derived (Method 1),0.7353,0.2099,0.0,0.0548
+Directly Optimized (alpha=0.5),0.2544,0.2466,0.2448,0.2542

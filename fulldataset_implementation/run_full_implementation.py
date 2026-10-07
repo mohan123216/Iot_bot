@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
 run_full_implementation.py: Master end-to-end runner for full dataset zero-day detection
-Executes:
-  1. 01_stream_clean_full_dataset.py
-  2. 02_loao_multisignal_pipeline.py
-  3. 03_generate_comprehensive_plots.py
-  4. 04_generate_final_report.py
+Executes the final active pipeline steps:
+  1. train_balanced_multiclass_ids.py
+  2. 02c_ultimate_zero_day_engine.py
+  3. 03_evaluate_paper_table9.py
+  4. rigorous_dual_evaluation_audit.py
+  5. generate_comparison_plots.py
+  6. 04_generate_final_report.py
 """
 
 import os
@@ -34,9 +36,10 @@ def main():
     print("=" * 90)
 
     steps = [
-        "01_stream_clean_full_dataset.py",
-        "02_loao_multisignal_pipeline.py",
-        "03_generate_comprehensive_plots.py",
+        "train_balanced_multiclass_ids.py",
+        "03_evaluate_paper_table9.py",
+        "rigorous_dual_evaluation_audit.py",
+        "generate_standard_metrics_chart.py",
         "04_generate_final_report.py"
     ]
 

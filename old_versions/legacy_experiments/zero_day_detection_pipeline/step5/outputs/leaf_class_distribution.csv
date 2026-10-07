@@ -1,0 +1,8 @@
+class,class_index,training_samples,avg_unique_leaves_per_tree,max_unique_leaves_in_tree,min_unique_leaves_in_tree
+Data_Exfiltration,0,4,1.46,4,1
+HTTP,1,186,3.14,11,1
+Keylogging,2,51,2.24,8,1
+Normal,3,334,4.79,11,2
+OS_Fingerprint,4,1244,4.95,16,1
+TCP,5,111538,5.68,24,1
+UDP,6,138841,4.56,16,1

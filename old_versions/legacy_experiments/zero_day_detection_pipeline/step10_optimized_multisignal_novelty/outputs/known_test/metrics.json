@@ -1,0 +1,402 @@
+{
+  "P90.0": {
+    "percentile": 90.0,
+    "total_known_flows": 54043,
+    "false_unknowns": 5374,
+    "known_acceptance_rate_pct": 90.06,
+    "false_unknown_rate_pct": 9.94,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 5,
+    "benign_rejection_rate_pct": 7.04,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 5369,
+    "known_attack_acceptance_rate_pct": 90.05,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 3,
+        "accepted_as_known": 37,
+        "acceptance_rate_pct": 92.5
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 5,
+        "accepted_as_known": 66,
+        "acceptance_rate_pct": 92.96
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 17,
+        "accepted_as_known": 250,
+        "acceptance_rate_pct": 93.63
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 2344,
+        "accepted_as_known": 21557,
+        "acceptance_rate_pct": 90.19
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 3003,
+        "accepted_as_known": 26749,
+        "acceptance_rate_pct": 89.91
+      }
+    }
+  },
+  "P92.0": {
+    "percentile": 92.0,
+    "total_known_flows": 54043,
+    "false_unknowns": 4300,
+    "known_acceptance_rate_pct": 92.04,
+    "false_unknown_rate_pct": 7.96,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 4,
+    "benign_rejection_rate_pct": 5.63,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 4296,
+    "known_attack_acceptance_rate_pct": 92.04,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 38,
+        "acceptance_rate_pct": 95.0
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 4,
+        "accepted_as_known": 67,
+        "acceptance_rate_pct": 94.37
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 10,
+        "accepted_as_known": 257,
+        "acceptance_rate_pct": 96.25
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 1873,
+        "accepted_as_known": 22028,
+        "acceptance_rate_pct": 92.16
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 2409,
+        "accepted_as_known": 27343,
+        "acceptance_rate_pct": 91.9
+      }
+    }
+  },
+  "P95.0": {
+    "percentile": 95.0,
+    "total_known_flows": 54043,
+    "false_unknowns": 2702,
+    "known_acceptance_rate_pct": 95.0,
+    "false_unknown_rate_pct": 5.0,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 3,
+    "benign_rejection_rate_pct": 4.23,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 2699,
+    "known_attack_acceptance_rate_pct": 95.0,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 38,
+        "acceptance_rate_pct": 95.0
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 3,
+        "accepted_as_known": 68,
+        "acceptance_rate_pct": 95.77
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 8,
+        "accepted_as_known": 259,
+        "acceptance_rate_pct": 97.0
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 1189,
+        "accepted_as_known": 22712,
+        "acceptance_rate_pct": 95.03
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 1498,
+        "accepted_as_known": 28254,
+        "acceptance_rate_pct": 94.97
+      }
+    },
+    "accepted_known_attack_classification_accuracy_pct": 100.0
+  },
+  "P97.0": {
+    "percentile": 97.0,
+    "total_known_flows": 54043,
+    "false_unknowns": 1698,
+    "known_acceptance_rate_pct": 96.86,
+    "false_unknown_rate_pct": 3.14,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 3,
+    "benign_rejection_rate_pct": 4.23,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 1695,
+    "known_attack_acceptance_rate_pct": 96.86,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 38,
+        "acceptance_rate_pct": 95.0
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 3,
+        "accepted_as_known": 68,
+        "acceptance_rate_pct": 95.77
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 7,
+        "accepted_as_known": 260,
+        "acceptance_rate_pct": 97.38
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 746,
+        "accepted_as_known": 23155,
+        "acceptance_rate_pct": 96.88
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 938,
+        "accepted_as_known": 28814,
+        "acceptance_rate_pct": 96.85
+      }
+    }
+  },
+  "P98.0": {
+    "percentile": 98.0,
+    "total_known_flows": 54043,
+    "false_unknowns": 1142,
+    "known_acceptance_rate_pct": 97.89,
+    "false_unknown_rate_pct": 2.11,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 2,
+    "benign_rejection_rate_pct": 2.82,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 1140,
+    "known_attack_acceptance_rate_pct": 97.89,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 38,
+        "acceptance_rate_pct": 95.0
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 69,
+        "acceptance_rate_pct": 97.18
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 4,
+        "accepted_as_known": 263,
+        "acceptance_rate_pct": 98.5
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 517,
+        "accepted_as_known": 23384,
+        "acceptance_rate_pct": 97.84
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 615,
+        "accepted_as_known": 29137,
+        "acceptance_rate_pct": 97.93
+      }
+    }
+  },
+  "P99.0": {
+    "percentile": 99.0,
+    "total_known_flows": 54043,
+    "false_unknowns": 613,
+    "known_acceptance_rate_pct": 98.87,
+    "false_unknown_rate_pct": 1.13,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 1,
+    "benign_rejection_rate_pct": 1.41,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 612,
+    "known_attack_acceptance_rate_pct": 98.87,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 1,
+        "accepted_as_known": 39,
+        "acceptance_rate_pct": 97.5
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 1,
+        "accepted_as_known": 70,
+        "acceptance_rate_pct": 98.59
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 3,
+        "accepted_as_known": 264,
+        "acceptance_rate_pct": 98.88
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 270,
+        "accepted_as_known": 23631,
+        "acceptance_rate_pct": 98.87
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 336,
+        "accepted_as_known": 29416,
+        "acceptance_rate_pct": 98.87
+      }
+    }
+  },
+  "P99.5": {
+    "percentile": 99.5,
+    "total_known_flows": 54043,
+    "false_unknowns": 295,
+    "known_acceptance_rate_pct": 99.45,
+    "false_unknown_rate_pct": 0.55,
+    "normal_benign_flows": 71,
+    "normal_false_alarms": 1,
+    "benign_rejection_rate_pct": 1.41,
+    "known_attack_flows": 53972,
+    "known_attack_rejections": 294,
+    "known_attack_acceptance_rate_pct": 99.46,
+    "class_wise_acceptance": {
+      "Data_Exfiltration": {
+        "support": 1,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 1,
+        "acceptance_rate_pct": 100.0
+      },
+      "HTTP": {
+        "support": 40,
+        "rejected_as_unknown": 0,
+        "accepted_as_known": 40,
+        "acceptance_rate_pct": 100.0
+      },
+      "Keylogging": {
+        "support": 11,
+        "rejected_as_unknown": 2,
+        "accepted_as_known": 9,
+        "acceptance_rate_pct": 81.82
+      },
+      "Normal": {
+        "support": 71,
+        "rejected_as_unknown": 1,
+        "accepted_as_known": 70,
+        "acceptance_rate_pct": 98.59
+      },
+      "OS_Fingerprint": {
+        "support": 267,
+        "rejected_as_unknown": 1,
+        "accepted_as_known": 266,
+        "acceptance_rate_pct": 99.63
+      },
+      "TCP": {
+        "support": 23901,
+        "rejected_as_unknown": 123,
+        "accepted_as_known": 23778,
+        "acceptance_rate_pct": 99.49
+      },
+      "UDP": {
+        "support": 29752,
+        "rejected_as_unknown": 168,
+        "accepted_as_known": 29584,
+        "acceptance_rate_pct": 99.44
+      }
+    }
+  }
+}

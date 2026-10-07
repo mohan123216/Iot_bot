@@ -1,0 +1,18 @@
+{
+  "selected_percentile": 95.0,
+  "selected_label": "P95.0",
+  "selection_rationale": "Percentile P95.0 was selected as the primary operating point because it satisfies operational criteria (Known Acceptance = 94.99% >= 95%, Benign Alarms = 2/72 <= 2) while maintaining high pseudo-unknown recall (72.62%) and pseudo-unknown F1 (66.70%).",
+  "metrics_at_selected_point": {
+    "percentile": 95.0,
+    "percentile_label": "P95.0",
+    "known_acceptance_pct": 94.99,
+    "false_unknown_rate_pct": 5.01,
+    "false_unknown_flows": 2707,
+    "benign_rejection_pct": 2.78,
+    "benign_false_alarm_flows": 2,
+    "pseudo_recall_pct": 72.62,
+    "pseudo_precision_pct": 61.68,
+    "pseudo_f1_pct": 66.7,
+    "is_feasible": true
+  }
+}

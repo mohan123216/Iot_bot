@@ -1,0 +1,21 @@
+strategy,cohort,sample_count,recall,precision,f1,auroc
+Equal Weights,"Aggregate (All 6,000)",6000,62.45,58.08,60.18,0.0
+Equal Weights,cross_class_interpolation,1500,59.53,24.82,35.03,0.0
+Equal Weights,controlled_perturbation,1500,71.6,28.42,40.69,0.0
+Equal Weights,boundary_low_density,1500,39.2,17.86,24.54,0.0
+Equal Weights,hard_pseudo_unknown,1500,79.47,30.59,44.17,0.0
+Step 9 AUC Weights,"Aggregate (All 6,000)",6000,73.47,61.97,67.23,0.0
+Step 9 AUC Weights,cross_class_interpolation,1500,65.13,26.53,37.71,0.0
+Step 9 AUC Weights,controlled_perturbation,1500,78.33,30.28,43.68,0.0
+Step 9 AUC Weights,boundary_low_density,1500,64.13,26.23,37.24,0.0
+Step 9 AUC Weights,hard_pseudo_unknown,1500,86.27,32.36,47.06,0.0
+Old Step 10 (Conf Only),"Aggregate (All 6,000)",6000,84.48,65.32,73.68,0.0
+Old Step 10 (Conf Only),cross_class_interpolation,1500,88.87,33.13,48.26,0.0
+Old Step 10 (Conf Only),controlled_perturbation,1500,90.53,33.54,48.95,0.0
+Old Step 10 (Conf Only),boundary_low_density,1500,68.53,27.64,39.39,0.0
+Old Step 10 (Conf Only),hard_pseudo_unknown,1500,90.0,33.41,48.73,0.0
+New Learned Four-Signal,"Aggregate (All 6,000)",6000,72.62,61.71,66.72,0.0
+New Learned Four-Signal,cross_class_interpolation,1500,69.73,27.9,39.86,0.0
+New Learned Four-Signal,controlled_perturbation,1500,75.0,29.39,42.23,0.0
+New Learned Four-Signal,boundary_low_density,1500,63.0,25.9,36.71,0.0
+New Learned Four-Signal,hard_pseudo_unknown,1500,82.73,31.47,45.59,0.0

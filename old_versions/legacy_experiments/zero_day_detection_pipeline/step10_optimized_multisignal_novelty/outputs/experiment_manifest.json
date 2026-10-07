@@ -1,0 +1,93 @@
+{
+  "experiment_name": "step10_optimized_multisignal_novelty",
+  "timestamp": "2026-10-04T09:16:35.699636",
+  "random_seed": 42,
+  "dataset_sizes": {
+    "train": 252198,
+    "validation": 54042,
+    "known_test": 54043,
+    "zeroday_test": 7302
+  },
+  "zero_day_counts": {
+    "train": 0,
+    "validation": 0,
+    "known_test": 0,
+    "zeroday_test": 7302
+  },
+  "zero_day_quarantine_verified": true,
+  "feature_representations": {
+    "representation_a_xgboost_count": 34,
+    "representation_b_geometry_count": 29
+  },
+  "model_paths": {
+    "classifier": "experiments/zero_day_detection_pipeline/models/xgboost_weighted_baseline.json",
+    "mahalanobis_covariance": "experiments/zero_day_detection_pipeline/step4/distance_models/mahalanobis_class_statistics.pkl",
+    "leaf_profiles": "experiments/zero_day_detection_pipeline/step5/leaf_models/leaf_class_profiles.pkl"
+  },
+  "pseudo_unknown_parameters": {
+    "n_samples_per_generator": 1500,
+    "cross_class_lambdas": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "perturbation_sigmas": [
+      1.5,
+      2.0
+    ],
+    "extrapolation_gammas": [
+      1.5,
+      2.0,
+      2.5
+    ],
+    "hard_pseudo_unknown": {
+      "n_samples": 1500,
+      "min_confidence": 0.85,
+      "noise_sigmas": [
+        1.2,
+        1.8,
+        2.4
+      ]
+    }
+  },
+  "normalization_method": "Nonparametric Empirical CDF (Fitted on Validation Known Traffic ONLY)",
+  "weight_optimization": {
+    "search_space": "4-Simplex (sum w_i = 1, w_i >= 0.05 for all signals)",
+    "grid_step": 0.02,
+    "weight_floor": 0.05,
+    "constraints": {
+      "known_acceptance_min": 0.945,
+      "benign_rejection_max": 0.02
+    },
+    "loss_weights": {
+      "lambda_balanced_f1": 1.0,
+      "lambda_hard": 0.35,
+      "lambda_auc": 0.25,
+      "lambda_red": 0.15
+    },
+    "selected_weights": {
+      "w_confidence": 0.71,
+      "w_mahalanobis": 0.05,
+      "w_leaf": 0.05,
+      "w_relative": 0.19
+    }
+  },
+  "selected_operating_point": {
+    "percentile": 95.0,
+    "label": "P95.0",
+    "rationale": "Percentile P95.0 was selected as the primary operating point because it satisfies operational criteria (Known Acceptance = 94.99% >= 95%, Benign Alarms = 2/72 <= 2) while maintaining high pseudo-unknown recall (72.62%) and pseudo-unknown F1 (66.70%)."
+  },
+  "primary_results": {
+    "zero_day_recall_pct": 39.65,
+    "detected_zero_day_flows": 2895,
+    "total_zero_day_flows": 7302,
+    "unknown_precision_pct": 51.72,
+    "unknown_f1_pct": 44.89,
+    "known_test_acceptance_pct": 95.0,
+    "false_unknown_rate_pct": 5.0,
+    "benign_rejection_pct": 4.23,
+    "known_attack_acceptance_pct": 95.0,
+    "accepted_attack_accuracy_pct": 100.0,
+    "os_fingerprint_subgroup_recall_pct": 37.44
+  }
+}

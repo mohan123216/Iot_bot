@@ -1,0 +1,7 @@
+Method,Weights,Threshold,Zero-Day Recall (%),Unknown Precision (%),Unknown F1 (%),Known Acceptance (%),Benign Rejection (%),OS_Fingerprint subgroup recall (%)
+Step 6 Conf + Mahalanobis OR,"OR Fusion [1.0, 1.0, 0, 0]",Class-Cond P95,41.22,52.99,46.37,95.06,2.82,0.12
+Step 8 Relative Distance OR,"OR Fusion [1.0, 0, 0, 1.0]",Class-Cond P95,45.77,52.32,48.82,94.36,9.86,6.28
+Step 9 AUC Weighted P95,"[0.7353, 0.2099, 0.0000, 0.0548]",Class-Cond P95,32.94,46.71,38.63,94.92,1.41,0.0
+Step 9 AUC Weighted P90,"[0.7353, 0.2099, 0.0000, 0.0548]",Class-Cond P90,47.21,39.18,42.82,90.1,5.63,14.5
+Old Step 10 (Conf-Only Collapse),"[1.0000, 0.0000, 0.0000, 0.0000]",Class-Cond P95,32.92,47.07,38.74,95.0,2.82,0.0
+NEW Step 10 Learned Four-Signal,"[0.7100, 0.0500, 0.0500, 0.1900]",Class-Cond P95.0,39.65,51.72,44.89,95.0,4.23,37.44

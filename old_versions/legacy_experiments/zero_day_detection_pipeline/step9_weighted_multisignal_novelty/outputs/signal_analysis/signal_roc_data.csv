@@ -1,0 +1,307 @@
+signal_key,signal_name,fpr,tpr,threshold
+Z_confidence,Confidence Novelty (1 - Pmax),0.0,0.0,inf
+Z_confidence,Confidence Novelty (1 - Pmax),0.00031,0.65956,0.99972
+Z_confidence,Confidence Novelty (1 - Pmax),0.00065,0.72978,0.99937
+Z_confidence,Confidence Novelty (1 - Pmax),0.00096,0.76867,0.99906
+Z_confidence,Confidence Novelty (1 - Pmax),0.00139,0.81311,0.99867
+Z_confidence,Confidence Novelty (1 - Pmax),0.00185,0.82156,0.99819
+Z_confidence,Confidence Novelty (1 - Pmax),0.00222,0.83422,0.9978
+Z_confidence,Confidence Novelty (1 - Pmax),0.00278,0.84,0.99724
+Z_confidence,Confidence Novelty (1 - Pmax),0.00316,0.846,0.99685
+Z_confidence,Confidence Novelty (1 - Pmax),0.00361,0.85178,0.99641
+Z_confidence,Confidence Novelty (1 - Pmax),0.00411,0.86022,0.99595
+Z_confidence,Confidence Novelty (1 - Pmax),0.00466,0.86622,0.99536
+Z_confidence,Confidence Novelty (1 - Pmax),0.00511,0.87289,0.99491
+Z_confidence,Confidence Novelty (1 - Pmax),0.00546,0.87689,0.99456
+Z_confidence,Confidence Novelty (1 - Pmax),0.00585,0.88022,0.99417
+Z_confidence,Confidence Novelty (1 - Pmax),0.00685,0.88511,0.99317
+Z_confidence,Confidence Novelty (1 - Pmax),0.00735,0.88822,0.99267
+Z_confidence,Confidence Novelty (1 - Pmax),0.00796,0.89933,0.99208
+Z_confidence,Confidence Novelty (1 - Pmax),0.00847,0.906,0.99154
+Z_confidence,Confidence Novelty (1 - Pmax),0.00922,0.91333,0.9908
+Z_confidence,Confidence Novelty (1 - Pmax),0.00975,0.91556,0.99027
+Z_confidence,Confidence Novelty (1 - Pmax),0.0104,0.91867,0.98962
+Z_confidence,Confidence Novelty (1 - Pmax),0.01112,0.91956,0.98892
+Z_confidence,Confidence Novelty (1 - Pmax),0.01208,0.92178,0.98795
+Z_confidence,Confidence Novelty (1 - Pmax),0.01308,0.92333,0.98695
+Z_confidence,Confidence Novelty (1 - Pmax),0.01471,0.92378,0.98533
+Z_confidence,Confidence Novelty (1 - Pmax),0.01641,0.92467,0.98401
+Z_confidence,Confidence Novelty (1 - Pmax),0.01786,0.92511,0.98216
+Z_confidence,Confidence Novelty (1 - Pmax),0.01847,0.92556,0.98155
+Z_confidence,Confidence Novelty (1 - Pmax),0.0193,0.92778,0.98076
+Z_confidence,Confidence Novelty (1 - Pmax),0.01993,0.93067,0.98009
+Z_confidence,Confidence Novelty (1 - Pmax),0.02087,0.93267,0.97915
+Z_confidence,Confidence Novelty (1 - Pmax),0.02172,0.93489,0.97829
+Z_confidence,Confidence Novelty (1 - Pmax),0.02272,0.93578,0.9773
+Z_confidence,Confidence Novelty (1 - Pmax),0.02326,0.93844,0.97676
+Z_confidence,Confidence Novelty (1 - Pmax),0.02441,0.94022,0.97561
+Z_confidence,Confidence Novelty (1 - Pmax),0.0252,0.942,0.97482
+Z_confidence,Confidence Novelty (1 - Pmax),0.02605,0.94244,0.97396
+Z_confidence,Confidence Novelty (1 - Pmax),0.02716,0.944,0.97287
+Z_confidence,Confidence Novelty (1 - Pmax),0.02809,0.94422,0.972
+Z_confidence,Confidence Novelty (1 - Pmax),0.02885,0.94511,0.97119
+Z_confidence,Confidence Novelty (1 - Pmax),0.02961,0.94622,0.97041
+Z_confidence,Confidence Novelty (1 - Pmax),0.03029,0.94689,0.96978
+Z_confidence,Confidence Novelty (1 - Pmax),0.03107,0.94889,0.96899
+Z_confidence,Confidence Novelty (1 - Pmax),0.0322,0.94978,0.96782
+Z_confidence,Confidence Novelty (1 - Pmax),0.03325,0.952,0.9668
+Z_confidence,Confidence Novelty (1 - Pmax),0.03392,0.95422,0.9661
+Z_confidence,Confidence Novelty (1 - Pmax),0.03544,0.95533,0.96481
+Z_confidence,Confidence Novelty (1 - Pmax),0.0378,0.95667,0.96223
+Z_confidence,Confidence Novelty (1 - Pmax),0.03927,0.95711,0.96075
+Z_confidence,Confidence Novelty (1 - Pmax),0.04023,0.95822,0.9599
+Z_confidence,Confidence Novelty (1 - Pmax),0.04236,0.95867,0.95768
+Z_confidence,Confidence Novelty (1 - Pmax),0.04356,0.95956,0.95646
+Z_confidence,Confidence Novelty (1 - Pmax),0.04495,0.96022,0.95509
+Z_confidence,Confidence Novelty (1 - Pmax),0.04818,0.96156,0.95209
+Z_confidence,Confidence Novelty (1 - Pmax),0.04946,0.962,0.95059
+Z_confidence,Confidence Novelty (1 - Pmax),0.05057,0.96289,0.9495
+Z_confidence,Confidence Novelty (1 - Pmax),0.05248,0.964,0.94758
+Z_confidence,Confidence Novelty (1 - Pmax),0.05472,0.96422,0.94532
+Z_confidence,Confidence Novelty (1 - Pmax),0.05688,0.96444,0.94316
+Z_confidence,Confidence Novelty (1 - Pmax),0.05797,0.96489,0.94208
+Z_confidence,Confidence Novelty (1 - Pmax),0.05914,0.96556,0.94097
+Z_confidence,Confidence Novelty (1 - Pmax),0.0606,0.96644,0.93951
+Z_confidence,Confidence Novelty (1 - Pmax),0.06269,0.96689,0.93742
+Z_confidence,Confidence Novelty (1 - Pmax),0.06832,0.96778,0.93174
+Z_confidence,Confidence Novelty (1 - Pmax),0.07163,0.96822,0.92902
+Z_confidence,Confidence Novelty (1 - Pmax),0.07503,0.96889,0.92515
+Z_confidence,Confidence Novelty (1 - Pmax),0.07849,0.96956,0.9218
+Z_confidence,Confidence Novelty (1 - Pmax),0.08647,0.97022,0.91359
+Z_confidence,Confidence Novelty (1 - Pmax),0.08934,0.97044,0.9107
+Z_confidence,Confidence Novelty (1 - Pmax),0.09258,0.97111,0.90744
+Z_confidence,Confidence Novelty (1 - Pmax),0.09467,0.972,0.90543
+Z_confidence,Confidence Novelty (1 - Pmax),0.09731,0.97333,0.90289
+Z_confidence,Confidence Novelty (1 - Pmax),0.0995,0.97356,0.90084
+Z_confidence,Confidence Novelty (1 - Pmax),0.10768,0.97422,0.89284
+Z_confidence,Confidence Novelty (1 - Pmax),0.11288,0.97533,0.88777
+Z_confidence,Confidence Novelty (1 - Pmax),0.11787,0.97578,0.88281
+Z_confidence,Confidence Novelty (1 - Pmax),0.122,0.97689,0.87983
+Z_confidence,Confidence Novelty (1 - Pmax),0.12933,0.97711,0.87084
+Z_confidence,Confidence Novelty (1 - Pmax),0.13865,0.97889,0.86348
+Z_confidence,Confidence Novelty (1 - Pmax),0.143,0.97889,0.85731
+Z_confidence,Confidence Novelty (1 - Pmax),0.14794,0.97933,0.85297
+Z_confidence,Confidence Novelty (1 - Pmax),0.15373,0.98022,0.84656
+Z_confidence,Confidence Novelty (1 - Pmax),0.16767,0.98089,0.83243
+Z_confidence,Confidence Novelty (1 - Pmax),0.17366,0.98222,0.82693
+Z_confidence,Confidence Novelty (1 - Pmax),0.18639,0.98222,0.81463
+Z_confidence,Confidence Novelty (1 - Pmax),0.19385,0.98311,0.80645
+Z_confidence,Confidence Novelty (1 - Pmax),0.20897,0.98444,0.79549
+Z_confidence,Confidence Novelty (1 - Pmax),0.22188,0.98489,0.77854
+Z_confidence,Confidence Novelty (1 - Pmax),0.23524,0.98533,0.76602
+Z_confidence,Confidence Novelty (1 - Pmax),0.25056,0.98622,0.74984
+Z_confidence,Confidence Novelty (1 - Pmax),0.27801,0.98644,0.72362
+Z_confidence,Confidence Novelty (1 - Pmax),0.30652,0.98689,0.69457
+Z_confidence,Confidence Novelty (1 - Pmax),0.35223,0.98711,0.65083
+Z_confidence,Confidence Novelty (1 - Pmax),0.4235,0.98844,0.57946
+Z_confidence,Confidence Novelty (1 - Pmax),0.51119,0.99022,0.4926
+Z_confidence,Confidence Novelty (1 - Pmax),0.6222,0.99356,0.39516
+Z_confidence,Confidence Novelty (1 - Pmax),0.76237,0.99644,0.24309
+Z_confidence,Confidence Novelty (1 - Pmax),0.85189,0.99889,0.14966
+Z_confidence,Confidence Novelty (1 - Pmax),0.9109,0.99933,0.08975
+Z_confidence,Confidence Novelty (1 - Pmax),0.9555,0.99978,0.04458
+Z_confidence,Confidence Novelty (1 - Pmax),0.98063,1.0,0.02054
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.0,0.0,inf
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.00139,0.23689,0.99865
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.00501,0.248,0.995
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.01042,0.25933,0.9896
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.01243,0.27756,0.98758
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.01504,0.28822,0.98497
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.01787,0.29889,0.98214
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.02074,0.312,0.97928
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.02376,0.32178,0.97626
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.02624,0.33089,0.97378
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.03053,0.34044,0.96949
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.03512,0.35111,0.9649
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.03873,0.36,0.96129
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.04332,0.36911,0.9567
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.04715,0.378,0.95287
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.05148,0.38489,0.94854
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.05557,0.39089,0.94445
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.05907,0.39844,0.94095
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.06232,0.40667,0.9377
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.06697,0.41533,0.93305
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.07265,0.424,0.92737
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.07755,0.43133,0.92247
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.08307,0.43867,0.91695
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.08817,0.44556,0.91185
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.09228,0.45444,0.90774
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.09728,0.462,0.90274
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.10259,0.46844,0.89743
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.10797,0.47533,0.89205
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.11326,0.484,0.88675
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.12122,0.49111,0.8788
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.12851,0.49711,0.87151
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.1344,0.50422,0.86562
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.14209,0.51178,0.85793
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.14918,0.518,0.85084
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.15891,0.52578,0.84111
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.16663,0.53333,0.83339
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.17335,0.54022,0.82667
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.18376,0.54667,0.81625
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.19402,0.55267,0.806
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.2058,0.55822,0.79422
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.21822,0.564,0.7818
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.22699,0.572,0.77305
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.23809,0.57689,0.76193
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.2536,0.58178,0.74642
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.26922,0.58867,0.7308
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.28243,0.59356,0.71759
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.29051,0.59844,0.7095
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.30117,0.60289,0.69885
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.31107,0.60844,0.68895
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.32443,0.61222,0.67559
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.33259,0.61689,0.66743
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.34347,0.62244,0.65654
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.36042,0.62511,0.63961
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.37232,0.62889,0.6277
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.38705,0.63333,0.61297
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.39915,0.63733,0.60087
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.41098,0.64156,0.58904
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.42252,0.64622,0.5775
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.43622,0.64956,0.5638
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.4569,0.65489,0.54313
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.47054,0.65889,0.52948
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.48357,0.662,0.51645
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.49854,0.66578,0.50148
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.50859,0.66933,0.49145
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.52209,0.67289,0.47796
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.54073,0.67511,0.45931
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.55777,0.67778,0.44227
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.57431,0.68089,0.42572
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.59583,0.68956,0.40419
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.61587,0.69311,0.38415
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.6408,0.69578,0.35922
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.6658,0.69844,0.33422
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.68693,0.70267,0.31311
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.7061,0.706,0.29394
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.73769,0.71089,0.26233
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.76087,0.71667,0.23915
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.78308,0.71778,0.21694
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.79309,0.71867,0.20693
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.81072,0.72378,0.1893
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.83148,0.72711,0.16854
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.84534,0.73133,0.15469
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.85955,0.73578,0.14048
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.87308,0.74289,0.12694
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.88035,0.74733,0.11967
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.8874,0.754,0.11262
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.89638,0.76,0.10368
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.90272,0.76711,0.09729
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.90781,0.77578,0.09221
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.91342,0.78267,0.0866
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.91731,0.79133,0.08271
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.92171,0.80333,0.07831
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.92559,0.81022,0.07442
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.93561,0.81644,0.06443
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.95337,0.82044,0.04665
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.96536,0.828,0.03466
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.96969,0.836,0.03033
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.98222,0.83956,0.0178
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.99138,0.84867,0.00864
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.99493,0.90111,0.00509
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.99663,0.95444,0.00339
+Z_mahalanobis,Mahalanobis Novelty (Dm),0.99822,0.98622,0.00179
+Z_leaf,Leaf-Space Novelty (1 - LeafSim),0.0,0.0,inf
+Z_leaf,Leaf-Space Novelty (1 - LeafSim),1.0,1.0,1.0
+Z_relative,Relative Class-Separation (Dm/Dother),0.0,0.0,inf
+Z_relative,Relative Class-Separation (Dm/Dother),0.00154,0.19556,0.9985
+Z_relative,Relative Class-Separation (Dm/Dother),0.00379,0.20689,0.99623
+Z_relative,Relative Class-Separation (Dm/Dother),0.00662,0.21644,0.99339
+Z_relative,Relative Class-Separation (Dm/Dother),0.01125,0.22511,0.98877
+Z_relative,Relative Class-Separation (Dm/Dother),0.01582,0.23333,0.9842
+Z_relative,Relative Class-Separation (Dm/Dother),0.01948,0.24111,0.98053
+Z_relative,Relative Class-Separation (Dm/Dother),0.02258,0.25044,0.97744
+Z_relative,Relative Class-Separation (Dm/Dother),0.02511,0.26022,0.97491
+Z_relative,Relative Class-Separation (Dm/Dother),0.02814,0.26956,0.97193
+Z_relative,Relative Class-Separation (Dm/Dother),0.03083,0.27911,0.96919
+Z_relative,Relative Class-Separation (Dm/Dother),0.03495,0.28533,0.96506
+Z_relative,Relative Class-Separation (Dm/Dother),0.03908,0.29244,0.96096
+Z_relative,Relative Class-Separation (Dm/Dother),0.04282,0.30022,0.9572
+Z_relative,Relative Class-Separation (Dm/Dother),0.04757,0.30844,0.95244
+Z_relative,Relative Class-Separation (Dm/Dother),0.05081,0.31711,0.94921
+Z_relative,Relative Class-Separation (Dm/Dother),0.05462,0.32511,0.94539
+Z_relative,Relative Class-Separation (Dm/Dother),0.05936,0.33333,0.94066
+Z_relative,Relative Class-Separation (Dm/Dother),0.06364,0.33978,0.93638
+Z_relative,Relative Class-Separation (Dm/Dother),0.0676,0.34733,0.93242
+Z_relative,Relative Class-Separation (Dm/Dother),0.07531,0.35356,0.92471
+Z_relative,Relative Class-Separation (Dm/Dother),0.08116,0.36022,0.91886
+Z_relative,Relative Class-Separation (Dm/Dother),0.08773,0.36644,0.91229
+Z_relative,Relative Class-Separation (Dm/Dother),0.09345,0.37222,0.90657
+Z_relative,Relative Class-Separation (Dm/Dother),0.10085,0.37822,0.89917
+Z_relative,Relative Class-Separation (Dm/Dother),0.10682,0.38756,0.89319
+Z_relative,Relative Class-Separation (Dm/Dother),0.11391,0.39467,0.88611
+Z_relative,Relative Class-Separation (Dm/Dother),0.11989,0.40267,0.88013
+Z_relative,Relative Class-Separation (Dm/Dother),0.12842,0.40956,0.8716
+Z_relative,Relative Class-Separation (Dm/Dother),0.13428,0.41622,0.86573
+Z_relative,Relative Class-Separation (Dm/Dother),0.14167,0.42267,0.85835
+Z_relative,Relative Class-Separation (Dm/Dother),0.14877,0.42956,0.85125
+Z_relative,Relative Class-Separation (Dm/Dother),0.15738,0.43622,0.84264
+Z_relative,Relative Class-Separation (Dm/Dother),0.17005,0.44156,0.82997
+Z_relative,Relative Class-Separation (Dm/Dother),0.18177,0.44711,0.81825
+Z_relative,Relative Class-Separation (Dm/Dother),0.19009,0.45267,0.80993
+Z_relative,Relative Class-Separation (Dm/Dother),0.19857,0.45778,0.80145
+Z_relative,Relative Class-Separation (Dm/Dother),0.20782,0.46111,0.7922
+Z_relative,Relative Class-Separation (Dm/Dother),0.21894,0.46644,0.78108
+Z_relative,Relative Class-Separation (Dm/Dother),0.22692,0.47156,0.7731
+Z_relative,Relative Class-Separation (Dm/Dother),0.23696,0.47489,0.76305
+Z_relative,Relative Class-Separation (Dm/Dother),0.25278,0.47933,0.74723
+Z_relative,Relative Class-Separation (Dm/Dother),0.27084,0.48244,0.72917
+Z_relative,Relative Class-Separation (Dm/Dother),0.28354,0.48733,0.71648
+Z_relative,Relative Class-Separation (Dm/Dother),0.29653,0.49289,0.70349
+Z_relative,Relative Class-Separation (Dm/Dother),0.31368,0.49689,0.68634
+Z_relative,Relative Class-Separation (Dm/Dother),0.33198,0.49978,0.66804
+Z_relative,Relative Class-Separation (Dm/Dother),0.34183,0.50289,0.65819
+Z_relative,Relative Class-Separation (Dm/Dother),0.35389,0.50689,0.64615
+Z_relative,Relative Class-Separation (Dm/Dother),0.36486,0.51,0.63515
+Z_relative,Relative Class-Separation (Dm/Dother),0.37719,0.51289,0.62285
+Z_relative,Relative Class-Separation (Dm/Dother),0.38849,0.518,0.61152
+Z_relative,Relative Class-Separation (Dm/Dother),0.40232,0.52156,0.5977
+Z_relative,Relative Class-Separation (Dm/Dother),0.42045,0.52533,0.57957
+Z_relative,Relative Class-Separation (Dm/Dother),0.43024,0.52822,0.56978
+Z_relative,Relative Class-Separation (Dm/Dother),0.44186,0.53178,0.55816
+Z_relative,Relative Class-Separation (Dm/Dother),0.44935,0.53511,0.55066
+Z_relative,Relative Class-Separation (Dm/Dother),0.4614,0.53956,0.53862
+Z_relative,Relative Class-Separation (Dm/Dother),0.47607,0.54378,0.52394
+Z_relative,Relative Class-Separation (Dm/Dother),0.49036,0.546,0.50966
+Z_relative,Relative Class-Separation (Dm/Dother),0.50011,0.55022,0.49993
+Z_relative,Relative Class-Separation (Dm/Dother),0.51323,0.554,0.48679
+Z_relative,Relative Class-Separation (Dm/Dother),0.52665,0.56311,0.47337
+Z_relative,Relative Class-Separation (Dm/Dother),0.54324,0.56733,0.45683
+Z_relative,Relative Class-Separation (Dm/Dother),0.55714,0.57156,0.44288
+Z_relative,Relative Class-Separation (Dm/Dother),0.57244,0.58089,0.42757
+Z_relative,Relative Class-Separation (Dm/Dother),0.58782,0.58489,0.4122
+Z_relative,Relative Class-Separation (Dm/Dother),0.60943,0.58733,0.39059
+Z_relative,Relative Class-Separation (Dm/Dother),0.62816,0.59356,0.37186
+Z_relative,Relative Class-Separation (Dm/Dother),0.65679,0.596,0.34323
+Z_relative,Relative Class-Separation (Dm/Dother),0.67657,0.59778,0.32349
+Z_relative,Relative Class-Separation (Dm/Dother),0.70179,0.60267,0.29825
+Z_relative,Relative Class-Separation (Dm/Dother),0.7283,0.60556,0.27171
+Z_relative,Relative Class-Separation (Dm/Dother),0.7528,0.60689,0.24722
+Z_relative,Relative Class-Separation (Dm/Dother),0.77149,0.608,0.22854
+Z_relative,Relative Class-Separation (Dm/Dother),0.7848,0.61111,0.21524
+Z_relative,Relative Class-Separation (Dm/Dother),0.80497,0.61444,0.19507
+Z_relative,Relative Class-Separation (Dm/Dother),0.81816,0.61933,0.18186
+Z_relative,Relative Class-Separation (Dm/Dother),0.83047,0.62422,0.16957
+Z_relative,Relative Class-Separation (Dm/Dother),0.84377,0.62556,0.15625
+Z_relative,Relative Class-Separation (Dm/Dother),0.85743,0.62911,0.14259
+Z_relative,Relative Class-Separation (Dm/Dother),0.8696,0.63289,0.13042
+Z_relative,Relative Class-Separation (Dm/Dother),0.87991,0.63822,0.12011
+Z_relative,Relative Class-Separation (Dm/Dother),0.88875,0.644,0.11127
+Z_relative,Relative Class-Separation (Dm/Dother),0.89743,0.64822,0.10259
+Z_relative,Relative Class-Separation (Dm/Dother),0.90543,0.65356,0.09459
+Z_relative,Relative Class-Separation (Dm/Dother),0.91175,0.65778,0.08826
+Z_relative,Relative Class-Separation (Dm/Dother),0.9149,0.66711,0.08512
+Z_relative,Relative Class-Separation (Dm/Dother),0.91917,0.67467,0.08084
+Z_relative,Relative Class-Separation (Dm/Dother),0.92336,0.682,0.07666
+Z_relative,Relative Class-Separation (Dm/Dother),0.92663,0.69,0.07339
+Z_relative,Relative Class-Separation (Dm/Dother),0.9332,0.69644,0.06682
+Z_relative,Relative Class-Separation (Dm/Dother),0.94599,0.70222,0.05403
+Z_relative,Relative Class-Separation (Dm/Dother),0.96177,0.70822,0.03825
+Z_relative,Relative Class-Separation (Dm/Dother),0.9679,0.716,0.03212
+Z_relative,Relative Class-Separation (Dm/Dother),0.9775,0.74244,0.02252
+Z_relative,Relative Class-Separation (Dm/Dother),0.98821,0.748,0.01181
+Z_relative,Relative Class-Separation (Dm/Dother),0.99275,0.76133,0.00727
+Z_relative,Relative Class-Separation (Dm/Dother),0.99484,0.80311,0.00518
+Z_relative,Relative Class-Separation (Dm/Dother),0.99667,0.862,0.00335
+Z_relative,Relative Class-Separation (Dm/Dother),0.99863,0.90689,0.00139

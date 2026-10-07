@@ -12,6 +12,7 @@ experiment:
 
 paths:
   workspace_dir: "d:/p01"
+  dataset_dir: "d:/p01/dataset"
   full_impl_dir: "d:/p01/Iot_bot/fulldataset_implementation"
   cleaned_sample_path: "d:/p01/Iot_bot/fulldataset_implementation/data/fulldataset_cleaned_sample.parquet"
   models_dir: "d:/p01/Iot_bot/fulldataset_implementation/models"

@@ -1,0 +1,68 @@
+{
+  "P90.0": {
+    "percentile": 90.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 3447,
+    "missed_zero_day": 3855,
+    "zero_day_recall_pct": 47.21,
+    "false_positives_known_test": 5351,
+    "unknown_precision_pct": 39.18,
+    "unknown_f1_score_pct": 42.82,
+    "known_test_acceptance_pct": 90.1
+  },
+  "P95.0": {
+    "percentile": 95.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 2405,
+    "missed_zero_day": 4897,
+    "zero_day_recall_pct": 32.94,
+    "false_positives_known_test": 2744,
+    "unknown_precision_pct": 46.71,
+    "unknown_f1_score_pct": 38.63,
+    "known_test_acceptance_pct": 94.92
+  },
+  "P97.0": {
+    "percentile": 97.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 2173,
+    "missed_zero_day": 5129,
+    "zero_day_recall_pct": 29.76,
+    "false_positives_known_test": 1677,
+    "unknown_precision_pct": 56.44,
+    "unknown_f1_score_pct": 38.97,
+    "known_test_acceptance_pct": 96.9
+  },
+  "P98.0": {
+    "percentile": 98.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 1176,
+    "missed_zero_day": 6126,
+    "zero_day_recall_pct": 16.11,
+    "false_positives_known_test": 1158,
+    "unknown_precision_pct": 50.39,
+    "unknown_f1_score_pct": 24.41,
+    "known_test_acceptance_pct": 97.86
+  },
+  "P99.0": {
+    "percentile": 99.0,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 347,
+    "missed_zero_day": 6955,
+    "zero_day_recall_pct": 4.75,
+    "false_positives_known_test": 605,
+    "unknown_precision_pct": 36.45,
+    "unknown_f1_score_pct": 8.41,
+    "known_test_acceptance_pct": 98.88
+  },
+  "P99.5": {
+    "percentile": 99.5,
+    "total_zero_day_flows": 7302,
+    "detected_zero_day": 238,
+    "missed_zero_day": 7064,
+    "zero_day_recall_pct": 3.26,
+    "false_positives_known_test": 299,
+    "unknown_precision_pct": 44.32,
+    "unknown_f1_score_pct": 6.07,
+    "known_test_acceptance_pct": 99.45
+  }
+}

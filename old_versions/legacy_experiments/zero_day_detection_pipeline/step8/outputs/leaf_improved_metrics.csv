@@ -1,0 +1,5 @@
+leaf_metric,val_p50,val_p95_threshold,zd_p50,zd_recall_at_95
+Step 5 Arithmetic Co-occurrence Novelty,0.1483,0.3003,0.2252,39.76
+Rare Tree Fraction (P < 0.01),0.0,0.0157,0.1129,57.98
+Unseen Leaf Fraction (P == 0),0.0,0.0,0.0271,68.13
+Negative Log-Likelihood (NLL),0.2551,0.7454,1.0136,55.64

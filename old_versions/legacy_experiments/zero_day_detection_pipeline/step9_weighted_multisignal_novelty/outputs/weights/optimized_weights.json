@@ -1,0 +1,30 @@
+{
+  "method": "Direct Validation vs Pseudo-Unknown Constrained Optimization",
+  "selected_alpha": 0.5,
+  "selected_weights": {
+    "w_confidence": 0.2544,
+    "w_mahalanobis": 0.2466,
+    "w_leaf": 0.2448,
+    "w_relative": 0.2542
+  },
+  "weights_by_alpha": {
+    "0.3": [
+      0.2743,
+      0.2352,
+      0.2128,
+      0.2777
+    ],
+    "0.5": [
+      0.2544,
+      0.2466,
+      0.2448,
+      0.2542
+    ],
+    "0.7": [
+      0.2509,
+      0.2497,
+      0.2497,
+      0.2497
+    ]
+  }
+}

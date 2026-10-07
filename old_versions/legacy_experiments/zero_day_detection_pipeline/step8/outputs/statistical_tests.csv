@@ -1,0 +1,8 @@
+comparison,sample_size,d1_detections,d2_detections,b (D1 only),c (D2 only),both,neither,mcnemar_chi2,p_value,statistically_significant,effect_direction
+Full Proposed Hybrid (Step 8) vs Step 6 Conf+Mahalanobis,7302,3400,3010,390,0,3010,3902,388.0026,0.0000e+00,True,D1 > D2 (+390 flows)
+Full Proposed Hybrid (Step 8) vs Relative Distance Only,7302,3400,1993,1407,0,1993,3902,1405.0007,0.0000e+00,True,D1 > D2 (+1407 flows)
+Full Proposed Hybrid (Step 8) vs Mahalanobis Only,7302,3400,1369,2031,0,1369,3902,2029.0005,0.0000e+00,True,D1 > D2 (+2031 flows)
+Full Proposed Hybrid (Step 8) vs Leaf Novelty Only,7302,3400,1566,1834,0,1566,3902,1832.0005,0.0000e+00,True,D1 > D2 (+1834 flows)
+Full Proposed Hybrid (Step 8) vs Confidence Only (P<0.95),7302,3400,1265,2135,0,1265,3902,2133.0005,0.0000e+00,True,D1 > D2 (+2135 flows)
+Relative Distance Only vs Mahalanobis Only,7302,1993,1369,1079,455,914,4854,253.0176,0.0000e+00,True,D1 > D2 (+624 flows)
+Confidence + Relative Distance vs Step 6 Conf+Mahalanobis,7302,2894,3010,332,448,2562,3960,16.9551,3.8274e-05,True,D2 > D1 (+116 flows)

@@ -1,0 +1,8 @@
+held_out_attack,dominant_known_prediction,dominant_prediction_pct,total_samples,conf_detected,mah_detected,leaf_detected,hybrid_detected,three_signal_detected,missed_by_all,hybrid_recall,hypothesis
+Data_Exfiltration,Keylogging,100.0,6,1,1,1,1,1,5,16.67,Strong mapping to Keylogging (100.0%) suggests substantial protocol/topology overlap.
+HTTP,TCP,76.32,266,193,213,223,265,265,1,99.62,Strong mapping to TCP (76.3%) suggests substantial protocol/topology overlap.
+Keylogging,Service_Scan,71.23,73,6,23,18,49,49,49,67.12,Strong mapping to Service_Scan (71.2%) suggests substantial protocol/topology overlap.
+OS_Fingerprint,Service_Scan,99.1,1777,29,57,7,119,121,1693,6.7,Strong mapping to Service_Scan (99.1%) suggests substantial protocol/topology overlap.
+Service_Scan,OS_Fingerprint,96.41,7302,1265,1369,1566,3010,3041,4332,41.22,Strong mapping to OS_Fingerprint (96.4%) suggests substantial protocol/topology overlap.
+TCP,OS_Fingerprint,43.29,159340,99452,75821,95468,158580,158580,13077,99.52,Strong mapping to OS_Fingerprint (43.3%) suggests substantial protocol/topology overlap.
+UDP,TCP,99.28,198344,12966,196923,175833,198337,198337,36,100.0,Strong mapping to TCP (99.3%) suggests substantial protocol/topology overlap.

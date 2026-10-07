@@ -1,0 +1,7 @@
+comparison,detector_A_detections,detector_B_detections,intersection_count,union_count,jaccard_similarity,unique_to_A,unique_to_B,unique_to_A_pct,unique_to_B_pct,union_pct
+Mahalanobis vs Leaf Novelty,1369,1566,261,2674,0.0976,1108,1305,15.17,17.87,36.62
+Mahalanobis vs Confidence (P<0.95),1369,1265,190,2444,0.0777,1179,1075,16.15,14.72,33.47
+Mahalanobis vs Confidence (P<0.99),1369,1884,243,3010,0.0807,1126,1641,15.42,22.47,41.22
+Leaf Novelty vs Confidence (P<0.95),1566,1265,967,1864,0.5188,599,298,8.2,4.08,25.53
+Leaf Novelty vs Confidence (P<0.99),1566,1884,1508,1942,0.7765,58,376,0.79,5.15,26.6
+Three-Way (Mahalanobis & Leaf & Conf_95),1369,1566,188,2970,0.0633,1106,526,15.15,7.2,40.67

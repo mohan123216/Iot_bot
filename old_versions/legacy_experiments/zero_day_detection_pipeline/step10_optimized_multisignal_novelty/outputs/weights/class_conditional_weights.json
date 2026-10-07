@@ -1,0 +1,107 @@
+{
+  "Data_Exfiltration": {
+    "class_idx": 0,
+    "val_flow_count": 2,
+    "optimization_status": "FROZEN_TO_GLOBAL (Small Sample Count)",
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  },
+  "HTTP": {
+    "class_idx": 1,
+    "val_flow_count": 40,
+    "optimization_status": "FROZEN_TO_GLOBAL (Small Sample Count)",
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  },
+  "Keylogging": {
+    "class_idx": 2,
+    "val_flow_count": 8,
+    "optimization_status": "FROZEN_TO_GLOBAL (Small Sample Count)",
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  },
+  "Normal": {
+    "class_idx": 3,
+    "val_flow_count": 74,
+    "optimization_status": "FROZEN_TO_GLOBAL (Small Sample Count)",
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  },
+  "OS_Fingerprint": {
+    "class_idx": 4,
+    "val_flow_count": 266,
+    "optimization_status": "FROZEN_TO_GLOBAL (Small Sample Count)",
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  },
+  "TCP": {
+    "class_idx": 5,
+    "val_flow_count": 23901,
+    "pseudo_flow_count": 1380,
+    "optimization_status": "LEARNED_WITH_SHRINKAGE",
+    "shrinkage_factor": 0.5,
+    "local_weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ],
+    "shrunk_weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ],
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  },
+  "UDP": {
+    "class_idx": 6,
+    "val_flow_count": 29751,
+    "pseudo_flow_count": 1037,
+    "optimization_status": "LEARNED_WITH_SHRINKAGE",
+    "shrinkage_factor": 0.5,
+    "local_weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ],
+    "shrunk_weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ],
+    "weights": [
+      0.71,
+      0.05,
+      0.05,
+      0.19
+    ]
+  }
+}

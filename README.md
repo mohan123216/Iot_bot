@@ -210,23 +210,44 @@ python fulldataset_implementation/scripts/02c_ultimate_zero_day_engine.py
 
 ---
 
-## 📁 7. Repository Structure
+## 📁 7. Cleaned & Organized Repository Structure
 
 ```text
-d:/p01/Iot_bot/
-├── README.md                                      # Master project documentation (this file)
-└── fulldataset_implementation/                    # Core production implementation
-    ├── configs/
-    │   └── config.yaml                            # Global feature and model parameters
-    ├── data/
-    │   └── fulldataset_cleaned_sample.parquet     # 61,130 balanced corpus across all 74 files
-    ├── scripts/
-    │   ├── 01_stream_clean_full_dataset.py        # Streaming extractor over 73.3M flows
-    │   ├── 02c_ultimate_zero_day_engine.py        # Multi-signal open-set anomaly engine
-    │   ├── 03_evaluate_paper_table9.py            # Official Table 9 reproduction script
-    │   └── train_balanced_multiclass_ids.py       # Tier 1 multi-class classifier
-    └── outputs/
-        └── loao_evaluations/
-            ├── paper_table9_reproduction_metrics.csv # Official 10-subclass benchmark CSV
-            └── loao_ultimate_standard_metrics.csv    # Open-set anomaly metrics CSV
+d:/p01/
+├── dataset/                                           # Dedicated raw dataset directory
+│   ├── data_1.csv ... data_74.csv                     # All 74 UNSW Bot-IoT CSV files (73.3M flows)
+│   └── data_names.csv                                 # Header feature names definition
+│
+└── Iot_bot/                                           # Main project codebase
+    ├── README.md                                      # Master project documentation
+    │
+    ├── outputs/                                       # Centralized outputs & results
+    │   ├── audit_reports/                             # Dual evaluation audit metrics (known & zero-day)
+    │   ├── dataset_audit/                             # Full 74-file distribution & audit tables
+    │   ├── loao_evaluations/                          # Official Table 9 reproduction & ultimate benchmarks
+    │   ├── plots/                                     # All 11 publication-grade PNG charts
+    │   ├── reports/                                   # Generated comprehensive markdown reports
+    │   └── weights_and_thresholds/                    # Learned simplex weights & adaptive thresholds
+    │
+    ├── fulldataset_implementation/                    # Production pipeline implementation
+    │   ├── configs/                                   # Pipeline hyperparameters (config.yaml)
+    │   ├── data/                                      # Cleaned balanced corpus (fulldataset_cleaned_sample.parquet)
+    │   ├── models/                                    # Serialized XGBoost models (.json)
+    │   ├── reports/                                   # Research report outputs
+    │   └── scripts/                                   # Production executable scripts
+    │       ├── 01_stream_clean_full_dataset.py        # Streaming cleaner & stratified sampler
+    │       ├── 02c_ultimate_zero_day_engine.py        # Multi-signal open-set zero-day anomaly engine
+    │       ├── 03_evaluate_paper_table9.py            # Official Table 9 reproduction benchmark
+    │       ├── 03_generate_comprehensive_plots.py     # Publication figure generator
+    │       ├── 04_generate_final_report.py            # Markdown report generator
+    │       ├── common_utils.py                        # Signal extractors, normalizers & optimizers
+    │       ├── generate_comparison_plots.py           # Baseline vs advanced comparison plotter
+    │       ├── rigorous_dual_evaluation_audit.py      # Dual evaluation audit (leakage assertions)
+    │       └── train_balanced_multiclass_ids.py       # Tier 1 balanced multi-class classifier
+    │
+    ├── old_versions/                                  # Archived historical versions & prototypes
+    │   ├── README.md                                  # Archive documentation
+    │   └── legacy_experiments/                        # Preliminary prototype steps (step4 to step10)
+    │
+    └── experiments/                                   # Backward-compatibility link to old_versions
 ```

@@ -1,0 +1,8 @@
+category,zero_day_detected,percentage
+Mahalanobis only,1108.0,15.17
+Leaf Novelty only,1305.0,17.87
+Both,261.0,3.57
+Neither,4628.0,63.38
+Total Union (OR Rule),2674.0,36.62
+Total Intersection (AND Rule),261.0,3.57
+Jaccard Similarity,0.0976,9.76

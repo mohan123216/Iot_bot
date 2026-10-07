@@ -1,0 +1,50 @@
+held_out_attack,detector,sample_count,detected_count,missed_count,false_unknowns,zero_day_recall,unknown_precision,unknown_f1,known_test_acceptance,benign_rejection_rate,known_attack_rejection
+Data_Exfiltration,Confidence Only,6,1,5,155,16.67,0.64,1.23,99.72,1.39,0.28
+Data_Exfiltration,Mahalanobis Only,6,1,5,2732,16.67,0.04,0.07,95.05,2.78,4.96
+Data_Exfiltration,Leaf Novelty Only,6,1,5,2731,16.67,0.04,0.07,95.05,6.94,4.95
+Data_Exfiltration,Confidence + Mahalanobis,6,1,5,3188,16.67,0.03,0.06,94.22,2.78,5.79
+Data_Exfiltration,Mahalanobis + Leaf,6,1,5,4493,16.67,0.02,0.04,91.85,8.33,8.15
+Data_Exfiltration,Three-Signal Hybrid,6,1,5,4941,16.67,0.02,0.04,91.04,8.33,8.96
+Data_Exfiltration,Three-Signal Score,6,1,5,2720,16.67,0.04,0.07,95.07,4.17,4.93
+HTTP,Confidence Only,266,193,73,95,72.56,67.01,69.68,99.83,1.39,0.17
+HTTP,Mahalanobis Only,266,213,53,2605,80.08,7.56,13.81,95.27,5.56,4.73
+HTTP,Leaf Novelty Only,266,223,43,2603,83.83,7.89,14.42,95.28,12.5,4.71
+HTTP,Confidence + Mahalanobis,266,265,1,3014,99.62,8.08,14.95,94.53,6.94,5.47
+HTTP,Mahalanobis + Leaf,266,265,1,4313,99.62,5.79,10.94,92.17,12.5,7.82
+HTTP,Three-Signal Hybrid,266,265,1,4712,99.62,5.32,10.11,91.45,13.89,8.55
+HTTP,Three-Signal Score,266,239,27,2604,89.85,8.41,15.37,95.27,9.72,4.72
+Keylogging,Confidence Only,73,6,67,121,8.22,4.72,6.0,99.78,0.0,0.22
+Keylogging,Mahalanobis Only,73,23,50,2734,31.51,0.83,1.63,95.04,2.78,4.96
+Keylogging,Leaf Novelty Only,73,18,55,2916,24.66,0.61,1.2,94.71,1.39,5.29
+Keylogging,Confidence + Mahalanobis,73,49,24,3126,67.12,1.54,3.02,94.33,2.78,5.67
+Keylogging,Mahalanobis + Leaf,73,23,50,4973,31.51,0.46,0.91,90.98,4.17,9.03
+Keylogging,Three-Signal Hybrid,73,49,24,5361,67.12,0.91,1.79,90.28,4.17,9.73
+Keylogging,Three-Signal Score,73,23,50,2787,31.51,0.82,1.6,94.94,4.17,5.06
+OS_Fingerprint,Confidence Only,1777,29,1748,4,1.63,87.88,3.2,99.99,1.41,0.01
+OS_Fingerprint,Mahalanobis Only,1777,57,1720,2701,3.21,2.07,2.51,95.08,12.68,4.91
+OS_Fingerprint,Leaf Novelty Only,1777,7,1770,2860,0.39,0.24,0.3,94.79,14.08,5.2
+OS_Fingerprint,Confidence + Mahalanobis,1777,119,1658,2712,6.7,4.2,5.16,95.06,14.08,4.93
+OS_Fingerprint,Mahalanobis + Leaf,1777,61,1716,5115,3.43,1.18,1.75,90.68,16.9,9.31
+OS_Fingerprint,Three-Signal Hybrid,1777,121,1656,5124,6.81,2.31,3.45,90.66,18.31,9.33
+OS_Fingerprint,Three-Signal Score,1777,65,1712,2776,3.66,2.29,2.82,94.94,15.49,5.05
+Service_Scan,Confidence Only,7302,1265,6037,4,17.32,99.68,29.52,99.99,0.0,0.01
+Service_Scan,Mahalanobis Only,7302,1369,5933,2661,18.75,33.97,24.16,95.08,1.41,4.93
+Service_Scan,Leaf Novelty Only,7302,1566,5736,2808,21.45,35.8,26.82,94.8,7.04,5.19
+Service_Scan,Confidence + Mahalanobis,7302,3010,4292,2670,41.22,52.99,46.37,95.06,2.82,4.94
+Service_Scan,Mahalanobis + Leaf,7302,2674,4628,4817,36.62,35.7,36.15,91.09,8.45,8.91
+Service_Scan,Three-Signal Hybrid,7302,3041,4261,4825,41.65,38.66,40.1,91.07,9.86,8.93
+Service_Scan,Three-Signal Score,7302,2034,5268,2700,27.86,42.97,33.8,95.0,9.86,4.99
+TCP,Confidence Only,159340,99452,59888,138,62.41,99.86,76.82,99.56,1.39,0.44
+TCP,Mahalanobis Only,159340,75821,83519,1577,47.58,97.96,64.05,94.95,4.17,5.05
+TCP,Leaf Novelty Only,159340,95468,63872,1560,59.91,98.39,74.48,95.01,6.94,4.99
+TCP,Confidence + Mahalanobis,159340,158580,760,1965,99.52,98.78,99.15,93.71,9.72,6.28
+TCP,Mahalanobis + Leaf,159340,124294,35046,2745,78.01,97.84,86.8,91.21,8.33,8.79
+TCP,Three-Signal Hybrid,159340,158580,760,3126,99.52,98.07,98.79,89.99,13.89,10.0
+TCP,Three-Signal Score,159340,108160,51180,1533,67.88,98.6,80.41,95.09,9.72,4.9
+UDP,Confidence Only,198344,12966,185378,146,6.54,98.89,12.26,99.42,1.41,0.57
+UDP,Mahalanobis Only,198344,196923,1421,1280,99.28,99.35,99.32,94.96,4.23,5.04
+UDP,Leaf Novelty Only,198344,175833,22511,1222,88.65,99.31,93.68,95.19,11.27,4.8
+UDP,Confidence + Mahalanobis,198344,198337,7,1739,100.0,99.13,99.56,93.15,7.04,6.85
+UDP,Mahalanobis + Leaf,198344,196961,1383,2312,99.3,98.84,99.07,90.89,12.68,9.1
+UDP,Three-Signal Hybrid,198344,198337,7,2764,100.0,98.63,99.31,89.11,15.49,10.87
+UDP,Three-Signal Score,198344,196926,1418,1299,99.29,99.34,99.31,94.88,12.68,5.1

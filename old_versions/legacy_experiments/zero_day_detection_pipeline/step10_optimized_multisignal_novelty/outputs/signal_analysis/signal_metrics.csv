@@ -1,0 +1,21 @@
+cohort,signal_key,signal_name,pseudo_samples,auroc,auprc,threshold_p95,recall_at_p95,precision_at_p95,f1_at_p95,fpr_at_p95
+All Generators (Aggregate),Z_confidence,Confidence Novelty (1 - Pmax),6000,0.9895,0.9646,0.95,96.85,68.26,80.08,5.0
+All Generators (Aggregate),Z_mahalanobis,Mahalanobis Novelty (Dm),6000,0.7056,0.4726,0.95,41.75,48.1,44.7,5.0
+All Generators (Aggregate),Z_leaf,Leaf-Space Novelty (1 - LeafSim),6000,0.9381,0.7818,0.95098,68.08,60.66,64.16,4.9
+All Generators (Aggregate),Z_relative,Relative Class-Separation (Dm/Dother),6000,0.592,0.3811,0.95,33.87,42.91,37.86,5.0
+Cross-Class Interpolation,Z_confidence,Confidence Novelty (1 - Pmax),1500,0.991,0.9426,0.95,97.73,35.17,51.73,5.0
+Cross-Class Interpolation,Z_mahalanobis,Mahalanobis Novelty (Dm),1500,0.5782,0.4257,0.95,45.93,20.31,28.17,5.0
+Cross-Class Interpolation,Z_leaf,Leaf-Space Novelty (1 - LeafSim),1500,0.9212,0.4136,0.95098,53.2,23.15,32.26,4.9
+Cross-Class Interpolation,Z_relative,Relative Class-Separation (Dm/Dother),1500,0.5903,0.4324,0.95,45.47,20.15,27.92,5.0
+Controlled Perturbation,Z_confidence,Confidence Novelty (1 - Pmax),1500,0.9976,0.9605,0.95,98.73,35.41,52.12,5.0
+Controlled Perturbation,Z_mahalanobis,Mahalanobis Novelty (Dm),1500,0.8275,0.3513,0.95,41.33,18.66,25.71,5.0
+Controlled Perturbation,Z_leaf,Leaf-Space Novelty (1 - LeafSim),1500,0.9759,0.8302,0.95098,84.4,32.34,46.76,4.9
+Controlled Perturbation,Z_relative,Relative Class-Separation (Dm/Dother),1500,0.6237,0.2423,0.95,31.33,14.81,20.12,5.0
+Boundary Low-Density,Z_confidence,Confidence Novelty (1 - Pmax),1500,0.972,0.848,0.95,92.33,33.89,49.58,5.0
+Boundary Low-Density,Z_mahalanobis,Mahalanobis Novelty (Dm),1500,0.5112,0.1396,0.95,27.73,13.34,18.01,5.0
+Boundary Low-Density,Z_leaf,Leaf-Space Novelty (1 - LeafSim),1500,0.8928,0.5973,0.95098,63.07,26.31,37.13,4.9
+Boundary Low-Density,Z_relative,Relative Class-Separation (Dm/Dother),1500,0.3948,0.0633,0.95,17.6,8.9,11.82,5.0
+Hard Pseudo-Unknowns,Z_confidence,Confidence Novelty (1 - Pmax),1500,0.9972,0.9386,0.95,98.6,35.37,52.07,5.0
+Hard Pseudo-Unknowns,Z_mahalanobis,Mahalanobis Novelty (Dm),1500,0.9056,0.3622,0.95,52.0,22.39,31.31,5.0
+Hard Pseudo-Unknowns,Z_leaf,Leaf-Space Novelty (1 - LeafSim),1500,0.9624,0.6977,0.95098,71.67,28.87,41.16,4.9
+Hard Pseudo-Unknowns,Z_relative,Relative Class-Separation (Dm/Dother),1500,0.759,0.2606,0.95,41.07,18.56,25.57,5.0

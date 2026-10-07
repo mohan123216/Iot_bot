@@ -1,0 +1,11 @@
+method,percentile,zero_day_recall,zero_day_precision,zero_day_f1,false_negative_rate,tp_unknown,fp_unknown
+Leaf-Space Novelty,90.0,40.33,34.91,37.43,59.67,2945,5491
+Euclidean Leaf Distance,90.0,41.08,35.42,38.04,58.92,3000,5470
+Leaf-Space Novelty,95.0,21.45,35.8,26.82,78.55,1566,2808
+Euclidean Leaf Distance,95.0,18.89,33.78,24.23,81.11,1379,2703
+Leaf-Space Novelty,97.5,20.84,53.07,29.93,79.16,1522,1346
+Euclidean Leaf Distance,97.5,13.59,41.63,20.49,86.41,992,1391
+Leaf-Space Novelty,99.0,6.3,43.19,11.0,93.7,460,605
+Euclidean Leaf Distance,99.0,11.83,62.38,19.89,88.17,864,521
+Leaf-Space Novelty,99.5,1.96,30.36,3.68,98.04,143,328
+Euclidean Leaf Distance,99.5,1.92,32.79,3.62,98.08,140,287

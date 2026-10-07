@@ -1,0 +1,14 @@
+configuration,zero_day_recall,unknown_precision,unknown_f1,false_negative_rate,benign_rejection_rate,known_attack_rejection_rate,known_acceptance_rate,val_acceptance_rate,tp_unknown,fp_unknown
+A1. Confidence Only (P < 0.95),17.32,99.68,29.52,82.68,0.0,0.01,99.99,99.99,1265,4
+A2. Confidence Only (P < 0.99),25.8,99.16,40.95,74.2,1.41,0.03,99.97,99.97,1884,16
+B. Mahalanobis Only (M > 1.0),18.75,33.97,24.16,81.25,1.41,4.93,95.08,94.99,1369,2661
+C. Leaf Novelty Only (L > 1.0),21.45,35.75,26.81,78.55,7.04,5.2,94.79,94.99,1566,2814
+D1. Confidence + Mahalanobis (P < 0.95),33.47,47.87,39.39,66.53,1.41,4.93,95.07,94.99,2444,2662
+D2. Confidence + Mahalanobis (P < 0.99),41.22,52.99,46.37,58.78,2.82,4.94,95.06,94.98,3010,2670
+E1. Confidence + Leaf Novelty (P < 0.95),25.53,39.85,31.12,74.47,7.04,5.2,94.79,94.98,1864,2814
+E2. Confidence + Leaf Novelty (P < 0.99),26.6,40.76,32.19,73.4,8.45,5.22,94.78,94.97,1942,2822
+F1. Mahalanobis + Leaf OR,36.62,35.67,36.14,63.38,8.45,8.92,91.08,91.04,2674,4823
+F2. Mahalanobis + Leaf AND,3.57,28.59,6.35,96.43,0.0,1.21,98.79,98.95,261,652
+G1. All 3 Signals OR (C_95 | M | L),40.67,38.11,39.35,59.33,8.45,8.92,91.08,91.03,2970,4823
+G2. All 3 Signals OR (C_99 | M | L),41.65,38.63,40.08,58.35,9.86,8.94,91.06,91.02,3041,4831
+G3. Three-Signal Weighted (95% Val),26.27,41.46,32.16,73.73,9.86,5.0,94.99,95.0,1918,2708

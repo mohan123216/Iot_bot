@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "protocol": "Strict Zero-Day Holdout & Stratified Split",
+  "zero_day_class": "Service_Scan",
+  "zero_day_in_train_count": 0,
+  "zero_day_in_val_count": 0,
+  "zero_day_in_known_test_count": 0,
+  "zero_day_in_zeroday_test_count": 7302,
+  "zero_day_leakage": false,
+  "train_validation_overlap": false,
+  "train_test_overlap": false,
+  "validation_test_overlap": false,
+  "known_zeroday_overlap": false,
+  "known_class_sets_match": true,
+  "feature_preprocessing_leakage": false,
+  "excluded_features_count": 9,
+  "excluded_features_list": [
+    "saddr",
+    "daddr",
+    "stime",
+    "ltime",
+    "pkSeqID",
+    "seq",
+    "attack",
+    "category",
+    "subcategory"
+  ],
+  "model_features_a_count": 34,
+  "model_features_b_count": 29,
+  "timestamp": "2026-10-03 17:22:23"
+}

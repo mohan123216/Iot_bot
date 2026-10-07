@@ -1,0 +1,52 @@
+{
+  "total_pseudo_unknowns": 6000,
+  "generator_breakdown": {
+    "cross_class_interpolation": 1500,
+    "controlled_perturbation": 1500,
+    "boundary_low_density": 1500,
+    "hard_pseudo_unknown": 1500
+  },
+  "random_seed": 42,
+  "strategies": {
+    "cross_class_interpolation": {
+      "count": 1500,
+      "lambdas": [
+        0.25,
+        0.5,
+        0.75
+      ]
+    },
+    "controlled_perturbation": {
+      "count": 1500,
+      "sigmas": [
+        1.5,
+        2.0
+      ]
+    },
+    "boundary_low_density": {
+      "count": 1500,
+      "gammas": [
+        1.5,
+        2.0,
+        2.5
+      ]
+    },
+    "hard_pseudo_unknown": {
+      "count": 1500,
+      "min_confidence": 0.85,
+      "noise_sigmas": [
+        1.2,
+        1.8,
+        2.4
+      ],
+      "subcohorts": {
+        "high_conf_mahalanobis": 500,
+        "high_conf_leaf": 500,
+        "high_conf_relative": 500
+      }
+    }
+  },
+  "zero_day_quarantined": true,
+  "calibration_source": "validation.parquet",
+  "output_path": "D:\\temporary\\project-word1-iot-bot-ds\\experiments\\zero_day_detection_pipeline\\step10_optimized_multisignal_novelty\\outputs\\pseudo_unknown\\pseudo_unknown_samples.parquet"
+}

@@ -18,12 +18,19 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 IMPL_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 _parent_dir = os.path.abspath(os.path.join(IMPL_DIR, ".."))
 _grandparent_dir = os.path.abspath(os.path.join(_parent_dir, ".."))
-if os.path.exists(os.path.join(_parent_dir, "data_1.csv")):
-    DATA_DIR = _parent_dir
-elif os.path.exists(os.path.join(_grandparent_dir, "data_1.csv")):
-    DATA_DIR = _grandparent_dir
-else:
-    DATA_DIR = _parent_dir
+candidate_dirs = [
+    os.path.join(_grandparent_dir, "dataset"),
+    os.path.join(_parent_dir, "dataset"),
+    os.path.join(_grandparent_dir, "data"),
+    os.path.join(_parent_dir, "data"),
+    _grandparent_dir,
+    _parent_dir
+]
+DATA_DIR = _grandparent_dir
+for d in candidate_dirs:
+    if os.path.exists(os.path.join(d, "data_1.csv")):
+        DATA_DIR = d
+        break
 WORKSPACE_DIR = DATA_DIR
 CONFIG_PATH = os.path.join(IMPL_DIR, "configs", "config.yaml")
 

@@ -1,0 +1,7 @@
+predicted_class,total_zd_flows,step6_detections,step6_recall_pct,rel_dist_detections,leaf_detections,knn_detections,proposed_detections,proposed_recall_pct,newly_recovered_flows,missed_by_proposed
+Data_Exfiltration,1,1,100.0,1,1,1,1,100.0,0,0
+HTTP,120,120,100.0,119,111,115,120,100.0,0,0
+Keylogging,6,6,100.0,0,6,5,6,100.0,0,0
+Normal,3,3,100.0,0,0,0,3,100.0,0,0
+OS_Fingerprint,7040,2748,39.03,1845,1318,445,3138,44.57,390,3902
+TCP,132,132,100.0,28,130,86,132,100.0,0,0

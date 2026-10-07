@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-10-03 19:06:10",
+  "zero_day_class": "Service_Scan",
+  "sample_counts": {
+    "train": 252198,
+    "validation": 54042,
+    "known_test": 54043,
+    "zeroday_test": 7302,
+    "joint_test": 61345
+  },
+  "zero_day_leakage_counts": {
+    "train": 0,
+    "validation": 0,
+    "known_test": 0,
+    "zeroday_test": 7302
+  },
+  "checks": {
+    "zero_day_strictly_quarantined": true,
+    "validation_only_calibration": true,
+    "no_model_retrained": true,
+    "no_step1_6_files_modified": true,
+    "no_train_test_pairwise_matrix": true
+  },
+  "environment": {
+    "python_version": "3.11.6",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  }
+}

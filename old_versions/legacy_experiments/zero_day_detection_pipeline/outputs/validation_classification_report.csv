@@ -1,0 +1,15 @@
+model,split,class,class_index,precision,recall,f1_score,support
+Baseline A (Unweighted),Validation,Data_Exfiltration,0,1.0,1.0,1.0,1
+Baseline A (Unweighted),Validation,HTTP,1,1.0,1.0,1.0,40
+Baseline A (Unweighted),Validation,Keylogging,2,0.9,0.8181818181818182,0.8571428571428571,11
+Baseline A (Unweighted),Validation,Normal,3,0.971830985915493,0.9583333333333334,0.965034965034965,72
+Baseline A (Unweighted),Validation,OS_Fingerprint,4,0.9924528301886792,0.9887218045112782,0.9905838041431262,266
+Baseline A (Unweighted),Validation,TCP,5,0.9998744979919679,1.0,0.9999372450580484,23901
+Baseline A (Unweighted),Validation,UDP,6,1.0,1.0,1.0,29751
+Baseline B (Weighted),Validation,Data_Exfiltration,0,0.5,1.0,0.6666666666666666,1
+Baseline B (Weighted),Validation,HTTP,1,1.0,1.0,1.0,40
+Baseline B (Weighted),Validation,Keylogging,2,1.0,0.7272727272727273,0.8421052631578947,11
+Baseline B (Weighted),Validation,Normal,3,0.972972972972973,1.0,0.9863013698630136,72
+Baseline B (Weighted),Validation,OS_Fingerprint,4,1.0,1.0,1.0,266
+Baseline B (Weighted),Validation,TCP,5,1.0,1.0,1.0,23901
+Baseline B (Weighted),Validation,UDP,6,1.0,1.0,1.0,29751
