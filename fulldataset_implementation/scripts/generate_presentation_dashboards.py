@@ -4,11 +4,14 @@ Creates 3 publication-grade presentation visual dashboards:
   1. section1_data_processing_dashboard.png
   2. section2_xgboost_classification_dashboard.png
   3. section3_zeroday_detection_dashboard.png
+Pixel-perfect layout with zero text overlaps, generous margins, and no clipping.
 """
 
 import os
 import numpy as np
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from matplotlib.patches import FancyBboxPatch, Rectangle
@@ -21,7 +24,7 @@ OUTPUT_DIR = r"d:\p01\Iot_bot\outputs\plots"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Colors
-C_DARK = "#1E293B"
+C_DARK = "#0F172A"
 C_BLUE = "#2563EB"
 C_TEAL = "#0D9488"
 C_GREEN = "#16A34A"
@@ -37,13 +40,14 @@ C_GRAY_TEXT = "#64748B"
 # SECTION 1: DATA PROCESSING DASHBOARD
 # ==============================================================================
 def create_section1_dashboard():
-    fig = plt.figure(figsize=(18, 11), facecolor=C_BG)
-    gs = gridspec.GridSpec(2, 2, height_ratios=[1.0, 1.1], width_ratios=[1.05, 1.15],
-                           left=0.04, right=0.96, top=0.92, bottom=0.07, wspace=0.18, hspace=0.25)
+    fig = plt.figure(figsize=(19, 11.5), facecolor=C_BG)
+    # top=0.88 gives generous clearance from figure header; left=0.05, right=0.96; wspace=0.28 avoids card-barchart collision
+    gs = gridspec.GridSpec(2, 2, height_ratios=[1.0, 1.05], width_ratios=[1.0, 1.05],
+                           left=0.05, right=0.96, top=0.88, bottom=0.07, wspace=0.28, hspace=0.34)
 
     # Main Header
-    fig.text(0.04, 0.96, "SECTION 1 — DATASET PROCESSING & PREPARATION", fontsize=18, fontweight='bold', color=C_DARK)
-    fig.text(0.04, 0.935, "UNSW Bot-IoT Benchmark: End-to-End Ingestion, Imbalance Resolution, and Feature Cleaning", fontsize=11, color=C_GRAY_TEXT)
+    fig.text(0.05, 0.965, "SECTION 1 — DATASET PROCESSING & PREPARATION", fontsize=18, fontweight='bold', color=C_DARK)
+    fig.text(0.05, 0.938, "UNSW Bot-IoT Benchmark: End-to-End Ingestion, Imbalance Resolution, and Feature Cleaning", fontsize=11, color=C_GRAY_TEXT)
 
     # Panel 1: Ingestion & Preprocessing Summary Card
     ax1 = fig.add_subplot(gs[0, 0])
@@ -53,23 +57,24 @@ def create_section1_dashboard():
     ax1.set_xticks([])
     ax1.set_yticks([])
 
-    ax1.text(0.04, 0.90, "Automated Streaming Preprocessing Pipeline", fontsize=13, fontweight='bold', color=C_DARK)
+    ax1.text(0.04, 0.91, "Automated Streaming Preprocessing Pipeline", fontsize=12.5, fontweight='bold', color=C_DARK)
     
+    # Concise text strictly formatted so it never crosses card boundary
     stats_text = [
-        ("Raw Input Corpus", "74 CSV Files (data_1.csv to data_74.csv)", C_BLUE),
+        ("Raw Input Corpus", "74 CSV Files (data_1 to data_74)", C_BLUE),
         ("Total Ingested Flows", "73,370,443 Raw Network Flows", C_DARK),
-        ("Extreme Imbalance", "Floods: 99.9%  |  Normal: 0.013% (9,543 flows)", C_AMBER),
-        ("Sampling Algorithm", "Streaming Bernoulli Downsampling + 100% Minority Retention", C_TEAL),
-        ("Minority Class Policy", "100% Preserved: Normal (9,543), Exfiltration (118), Keylogging (1,469)", C_GREEN),
-        ("High-Volume Flood Cap", "Dynamically Capped to ~10,000 flows per attack type", C_PURPLE),
-        ("Data Cleaning Rules", "Hex port parsing (0x0303), negative flags (-1), invariant extraction", C_DARK),
-        ("Curated Output Sample", "61,130 flows × 23 feature columns (fulldataset_cleaned_sample.parquet)", C_GREEN)
+        ("Extreme Imbalance", "Floods: 99.9%  |  Normal: 0.013% (9,543)", C_AMBER),
+        ("Sampling Algorithm", "Streaming Bernoulli + 100% Minority Retention", C_TEAL),
+        ("Rare Classes Policy", "100% Preserved: Normal, Exfil, Keylogging", C_GREEN),
+        ("High-Volume Flood Cap", "Dynamically Capped to ~10,000 flows/attack", C_PURPLE),
+        ("Cleaning Invariants", "Hex ports (0x0303), negative flags (-1)", C_DARK),
+        ("Curated Output Sample", "61,130 flows × 23 feature columns", C_GREEN)
     ]
 
-    y_pos = 0.77
+    y_pos = 0.78
     for label, val, color in stats_text:
-        ax1.text(0.04, y_pos, f"•  {label}:", fontsize=9.5, fontweight='bold', color=C_DARK)
-        ax1.text(0.40, y_pos, val, fontsize=9.5, fontweight='bold', color=color)
+        ax1.text(0.04, y_pos, f"•  {label}:", fontsize=9.2, fontweight='bold', color=C_DARK)
+        ax1.text(0.42, y_pos, val, fontsize=9.2, fontweight='bold', color=color)
         y_pos -= 0.095
 
     # Panel 2: Class Distribution Comparison Bar Chart
@@ -86,29 +91,29 @@ def create_section1_dashboard():
     colors = [C_GREEN, C_PURPLE, C_AMBER] + [C_BLUE]*8
 
     y_indices = np.arange(len(classes))
-    bars = ax2.barh(y_indices, curated_counts, color=colors, height=0.65, edgecolor=C_DARK, linewidth=0.5)
+    bars = ax2.barh(y_indices, curated_counts, color=colors, height=0.62, edgecolor=C_DARK, linewidth=0.5)
 
     ax2.set_yticks(y_indices)
-    ax2.set_yticklabels(classes, fontsize=9.5, fontweight='bold', color=C_DARK)
+    ax2.set_yticklabels(classes, fontsize=9.0, fontweight='bold', color=C_DARK)
     ax2.invert_yaxis()
-    ax2.set_xlabel("Curated Flow Count in Cleaned Sample", fontsize=10, fontweight='bold', color=C_DARK)
-    ax2.set_title("Curated Balanced Class Distribution (Total: 61,130 Flows)", fontsize=12, fontweight='bold', color=C_DARK, pad=10)
+    ax2.set_xlabel("Curated Flow Count in Cleaned Sample", fontsize=9.5, fontweight='bold', color=C_DARK)
+    ax2.set_title("Curated Balanced Class Distribution (Total: 61,130 Flows)", fontsize=11.5, fontweight='bold', color=C_DARK, pad=10)
     ax2.grid(axis='x', linestyle='--', alpha=0.5)
 
     for bar in bars:
         w = bar.get_width()
-        ax2.text(w + 150, bar.get_y() + bar.get_height()/2, f"{int(w):,}",
-                 va='center', ha='left', fontsize=8.5, fontweight='bold', color=C_DARK)
-    ax2.set_xlim(0, 11800)
+        ax2.text(w + 180, bar.get_y() + bar.get_height()/2, f"{int(w):,}",
+                 va='center', ha='left', fontsize=8.0, fontweight='bold', color=C_DARK)
+    ax2.set_xlim(0, 12200)
 
-    # Panel 3: Processed Dataset Table Preview (Bottom, spanning full width)
+    # Panel 3: Processed Dataset Table Preview
     ax3 = fig.add_subplot(gs[1, :])
     ax3.set_facecolor(C_WHITE)
     for spine in ax3.spines.values():
         spine.set_color(C_GRAY_LIGHT)
     ax3.axis('off')
 
-    ax3.text(0.0, 1.03, "Clean Processed Network Flow Records (Sample Preview from fulldataset_cleaned_sample.csv)",
+    ax3.text(0.0, 1.06, "Clean Processed Network Flow Records (Sample Preview from fulldataset_cleaned_sample.csv)",
              fontsize=12, fontweight='bold', color=C_DARK, transform=ax3.transAxes)
 
     columns = [
@@ -126,12 +131,12 @@ def create_section1_dashboard():
         ["1 (TCP)", "1 (e)", "2 (CON)", "58920", "21", "2.150", "85", "64,200", "39.53", "38.10", "1.43", "755.3", "110.4", "Theft", "Data_Exfiltration"]
     ]
 
-    table = ax3.table(cellText=table_data, colLabels=columns, loc='center', cellLoc='center')
+    col_w = [0.065, 0.055, 0.060, 0.050, 0.045, 0.055, 0.050, 0.065, 0.065, 0.060, 0.060, 0.055, 0.050, 0.090, 0.095]
+    table = ax3.table(cellText=table_data, colLabels=columns, colWidths=col_w, loc='center', cellLoc='center')
     table.auto_set_font_size(False)
     table.set_fontsize(8.5)
     table.scale(1.0, 1.85)
 
-    # Style table headers and cells
     for (r, c), cell in table.get_celld().items():
         cell.set_edgecolor(C_GRAY_LIGHT)
         if r == 0:
@@ -143,9 +148,9 @@ def create_section1_dashboard():
             cell.set_facecolor(C_WHITE)
 
     # Caption at bottom
-    caption_box = FancyBboxPatch((0.04, 0.012), 0.92, 0.038, boxstyle="round,pad=0.01",
+    caption_box = FancyBboxPatch((0.05, 0.012), 0.90, 0.038, boxstyle="round,pad=0.01",
                                  facecolor="#E2E8F0", edgecolor=C_GRAY_LIGHT, transform=fig.transFigure)
-    fig.patches.append(caption_box)
+    fig.add_artist(caption_box)
     fig.text(0.50, 0.025, "Dataset Processing — Automated preprocessing and preparation of network traffic for experimentation.",
              ha='center', va='center', fontsize=10.5, fontweight='bold', color=C_DARK)
 
@@ -158,13 +163,16 @@ def create_section1_dashboard():
 # SECTION 2: XGBOOST CLASSIFICATION DASHBOARD
 # ==============================================================================
 def create_section2_dashboard():
-    fig = plt.figure(figsize=(18, 11), facecolor=C_BG)
-    gs = gridspec.GridSpec(2, 2, height_ratios=[1.05, 1.0], width_ratios=[1.0, 1.0],
-                           left=0.04, right=0.96, top=0.92, bottom=0.07, wspace=0.18, hspace=0.25)
+    fig = plt.figure(figsize=(19, 11.8), facecolor=C_BG)
+    # left=0.08 gives ample margin so bytes_per_pkt is never cut off
+    # top=0.88 gives full clearance between subtitle and plot titles
+    # hspace=0.38 eliminates collision between Predicted Class and table titles
+    gs = gridspec.GridSpec(2, 2, height_ratios=[1.05, 0.95], width_ratios=[1.0, 1.0],
+                           left=0.08, right=0.95, top=0.88, bottom=0.07, wspace=0.22, hspace=0.38)
 
     # Header
-    fig.text(0.04, 0.96, "SECTION 2 — KNOWN-ATTACK XGBOOST CLASSIFICATION", fontsize=18, fontweight='bold', color=C_DARK)
-    fig.text(0.04, 0.935, "Tier 1 Classifier: 35 Features, Cost-Sensitive Training, Probabilities & Metrics", fontsize=11, color=C_GRAY_TEXT)
+    fig.text(0.08, 0.965, "SECTION 2 — KNOWN-ATTACK XGBOOST CLASSIFICATION", fontsize=18, fontweight='bold', color=C_DARK)
+    fig.text(0.08, 0.938, "Tier 1 Classifier: 35 Features, Cost-Sensitive Training, Probabilities & Metrics", fontsize=11, color=C_GRAY_TEXT)
 
     # Panel 1: Training Setup & Top Features
     ax1 = fig.add_subplot(gs[0, 0])
@@ -178,14 +186,15 @@ def create_section2_dashboard():
 
     bars = ax1.barh(y_pos, importances, color=C_BLUE, height=0.6, edgecolor=C_DARK, linewidth=0.5)
     ax1.set_yticks(y_pos)
-    ax1.set_yticklabels(top_features, fontsize=9, fontweight='bold', color=C_DARK)
+    ax1.set_yticklabels(top_features, fontsize=9.0, fontweight='bold', color=C_DARK)
     ax1.invert_yaxis()
     ax1.set_xlabel("Predictive Weight (Gain Importance)", fontsize=9.5, fontweight='bold', color=C_DARK)
-    ax1.set_title("XGBoost Model Architecture & Top 10 Feature Weights (35 Total)", fontsize=11.5, fontweight='bold', color=C_DARK, pad=8)
+    ax1.set_title("XGBoost Model Architecture & Top 10 Feature Weights (35 Total)", fontsize=11.5, fontweight='bold', color=C_DARK, pad=10)
     ax1.grid(axis='x', linestyle='--', alpha=0.5)
 
-    ax1.text(0.55, 0.35, "Training Configuration:\n• Algorithm: XGBoost (Hist)\n• Estimators: 100 Trees (depth=6)\n• Sample Weights: Balanced\n• Split: 70% Train / 30% Test\n• Leakage: 0 Overlapping IDs",
-             transform=ax1.transAxes, fontsize=8.5, bbox=dict(boxstyle='round,pad=0.5', facecolor='#F8FAFC', edgecolor=C_GRAY_LIGHT))
+    # Position info box in lower right where bars are shortest, avoiding any text overlap
+    ax1.text(0.50, 0.12, "Training Configuration:\n• Algorithm: XGBoost (Hist)\n• Estimators: 100 Trees (depth=6)\n• Sample Weights: Balanced\n• Split: 70% Train / 30% Test\n• Leakage: 0 Overlapping IDs",
+             transform=ax1.transAxes, fontsize=8.2, bbox=dict(boxstyle='round,pad=0.4', facecolor='#F8FAFC', edgecolor=C_GRAY_LIGHT))
 
     # Panel 2: Normalized Confusion Matrix Heatmap
     ax2 = fig.add_subplot(gs[0, 1])
@@ -209,11 +218,11 @@ def create_section2_dashboard():
     im = ax2.imshow(cm_data, cmap="Blues", vmin=0, vmax=1.0)
     ax2.set_xticks(np.arange(len(class_names)))
     ax2.set_yticks(np.arange(len(class_names)))
-    ax2.set_xticklabels(class_names, rotation=45, ha='right', fontsize=8.5, fontweight='bold')
-    ax2.set_yticklabels(class_names, fontsize=8.5, fontweight='bold')
-    ax2.set_xlabel("Predicted Class", fontsize=9.5, fontweight='bold', color=C_DARK)
+    ax2.set_xticklabels(class_names, rotation=45, ha='right', fontsize=8.2, fontweight='bold')
+    ax2.set_yticklabels(class_names, fontsize=8.2, fontweight='bold')
+    ax2.set_xlabel("Predicted Class", fontsize=9.5, fontweight='bold', color=C_DARK, labelpad=5)
     ax2.set_ylabel("True Class", fontsize=9.5, fontweight='bold', color=C_DARK)
-    ax2.set_title("Normalized Confusion Matrix (Overall Accuracy: 99.04%)", fontsize=11.5, fontweight='bold', color=C_DARK, pad=8)
+    ax2.set_title("Normalized Confusion Matrix (Overall Accuracy: 99.04%)", fontsize=11.5, fontweight='bold', color=C_DARK, pad=10)
 
     for i in range(len(class_names)):
         val = cm_data[i, i]
@@ -226,7 +235,7 @@ def create_section2_dashboard():
     ax3.set_facecolor(C_WHITE)
     ax3.axis('off')
 
-    ax3.text(0.0, 1.04, "Sample Inferences & Softmax Probability Distributions", fontsize=11.5, fontweight='bold', color=C_DARK, transform=ax3.transAxes)
+    ax3.text(0.0, 1.05, "Sample Inferences & Softmax Probability Distributions", fontsize=11.5, fontweight='bold', color=C_DARK, transform=ax3.transAxes)
 
     prob_headers = ["Flow ID", "True Traffic", "Predicted", "P(Top 1)", "P(Top 2)", "P(Top 3)"]
     prob_data = [
@@ -240,7 +249,7 @@ def create_section2_dashboard():
     t_prob = ax3.table(cellText=prob_data, colLabels=prob_headers, loc='center', cellLoc='center')
     t_prob.auto_set_font_size(False)
     t_prob.set_fontsize(8.5)
-    t_prob.scale(1.0, 1.75)
+    t_prob.scale(1.0, 1.70)
 
     for (r, c), cell in t_prob.get_celld().items():
         cell.set_edgecolor(C_GRAY_LIGHT)
@@ -257,7 +266,7 @@ def create_section2_dashboard():
     ax4.set_facecolor(C_WHITE)
     ax4.axis('off')
 
-    ax4.text(0.0, 1.04, "Classification Metrics across Known Attack Classes (Test Split)", fontsize=11.5, fontweight='bold', color=C_DARK, transform=ax4.transAxes)
+    ax4.text(0.0, 1.05, "Classification Metrics across Known Attack Classes (Test Split)", fontsize=11.5, fontweight='bold', color=C_DARK, transform=ax4.transAxes)
 
     metrics_headers = ["Class", "Test Flows", "Accuracy", "Precision", "Recall", "F1-Score"]
     metrics_data = [
@@ -273,7 +282,7 @@ def create_section2_dashboard():
     t_met = ax4.table(cellText=metrics_data, colLabels=metrics_headers, loc='center', cellLoc='center')
     t_met.auto_set_font_size(False)
     t_met.set_fontsize(8.5)
-    t_met.scale(1.0, 1.75)
+    t_met.scale(1.0, 1.70)
 
     for (r, c), cell in t_met.get_celld().items():
         cell.set_edgecolor(C_GRAY_LIGHT)
@@ -286,9 +295,9 @@ def create_section2_dashboard():
             cell.set_facecolor(C_WHITE)
 
     # Caption Box
-    caption_box = FancyBboxPatch((0.04, 0.012), 0.92, 0.038, boxstyle="round,pad=0.01",
+    caption_box = FancyBboxPatch((0.08, 0.012), 0.87, 0.038, boxstyle="round,pad=0.01",
                                  facecolor="#E2E8F0", edgecolor=C_GRAY_LIGHT, transform=fig.transFigure)
-    fig.patches.append(caption_box)
+    fig.add_artist(caption_box)
     fig.text(0.50, 0.025, "Known-Attack Classification — XGBoost learns the known traffic classes and produces the initial classification and probability estimates.",
              ha='center', va='center', fontsize=10.5, fontweight='bold', color=C_DARK)
 
@@ -303,11 +312,11 @@ def create_section2_dashboard():
 def create_section3_dashboard():
     fig = plt.figure(figsize=(20, 13), facecolor=C_BG)
     gs = gridspec.GridSpec(3, 2, height_ratios=[0.55, 1.15, 1.1], width_ratios=[1.1, 1.0],
-                           left=0.03, right=0.97, top=0.93, bottom=0.06, wspace=0.18, hspace=0.28)
+                           left=0.04, right=0.96, top=0.93, bottom=0.06, wspace=0.20, hspace=0.32)
 
     # Title
-    fig.text(0.03, 0.97, "SECTION 3 — MULTI-SIGNAL ZERO-DAY DETECTION (FLAGSHIP RESULTS)", fontsize=20, fontweight='bold', color=C_DARK)
-    fig.text(0.03, 0.945, "Leave-One-Attack-Out (LOAO) Protocol: Multi-Signal Calibration, Score Fusion, and Zero-Day Isolation", fontsize=11.5, color=C_GRAY_TEXT)
+    fig.text(0.04, 0.97, "SECTION 3 — MULTI-SIGNAL ZERO-DAY DETECTION (FLAGSHIP RESULTS)", fontsize=20, fontweight='bold', color=C_DARK)
+    fig.text(0.04, 0.945, "Leave-One-Attack-Out (LOAO) Protocol: Multi-Signal Calibration, Score Fusion, and Zero-Day Isolation", fontsize=11.5, color=C_GRAY_TEXT)
 
     # Top Banner: Experiment Setup & Architecture Pipeline
     ax_top = fig.add_subplot(gs[0, :])
@@ -319,10 +328,10 @@ def create_section3_dashboard():
     flow_boxes = [
         ("1. Withhold 100% of Attack", "Target Zero-Day subclass (e.g. DoS-TCP)\nquarantined strictly to test set (0 in train)", C_BLUE),
         ("2. Multi-Signal Scoring", "Evaluate: S_C (Confidence), S_M (Mahalanobis),\nS_L (Tree Leaves), S_R (Relative Distance)", C_PURPLE),
-        ("3. Nonparametric ECDF", "Calibrate raw scores to uniform ranks:\nZ_i = F_known(S_i) ∈ [0.0, 1.0]", C_TEAL),
-        ("4. Simplex Score Fusion", "Fused Score: S_comp = Σ (w_i · Z_i)\nWeights optimized to maximize separation", C_AMBER),
-        ("5. Bounded Threshold τ", "Calibrated at P95 on known validation data\nGuarantees ≤5% FP (achieved 0.14% FP)", C_RED),
-        ("6. Zero-Day Decision", "If S_comp > τ ──► 🚨 QUARANTINE ZERO-DAY\nIf S_comp ≤ τ ──► ✅ Admit Known Traffic", C_GREEN)
+        ("3. Nonparametric ECDF", "Calibrate raw scores to uniform ranks:\nZ_i = F_known(S_i) in [0.0, 1.0]", C_TEAL),
+        ("4. Simplex Score Fusion", "Fused Score: S_comp = sum(w_i * Z_i)\nWeights optimized to maximize separation", C_AMBER),
+        ("5. Bounded Threshold tau", "Calibrated at P95 on known validation data\nGuarantees <=5% FP (achieved 0.14% FP)", C_RED),
+        ("6. Zero-Day Decision", "If S_comp > tau ---> QUARANTINE ZERO-DAY\nIf S_comp <= tau ---> Admit Known Traffic", C_GREEN)
     ]
 
     for i, (b_title, b_sub, b_color) in enumerate(flow_boxes):
@@ -338,22 +347,22 @@ def create_section3_dashboard():
     ax_trace.set_facecolor(C_WHITE)
     ax_trace.axis('off')
 
-    ax_trace.text(0.0, 1.04, "Live Flow Score Calculation, Calibration, Thresholding, and Decision Tracing",
+    ax_trace.text(0.0, 1.05, "Live Flow Score Calculation, Calibration, Thresholding, and Decision Tracing",
                   fontsize=12, fontweight='bold', color=C_DARK, transform=ax_trace.transAxes)
 
     trace_headers = [
         "Flow ID", "True Traffic", "XGBoost Guess", "S_C (Conf)", "S_M (Mahal)",
-        "S_L (Leaf)", "S_R (Rel)", "Composite Score", "Threshold (τ)", "Decision", "Status"
+        "S_L (Leaf)", "S_R (Rel)", "Composite Score", "Threshold (tau)", "Decision", "Status"
     ]
 
     trace_rows = [
-        ["#00142", "Benign Normal", "Normal", "0.002", "1.42 σ", "0.031", "0.063", "0.041", "0.780", "PASS (Admitted)", "True Negative (TN)"],
-        ["#00891", "Benign Normal", "Normal", "0.005", "1.95 σ", "0.045", "0.088", "0.062", "0.780", "PASS (Admitted)", "True Negative (TN)"],
-        ["#01249", "Known DoS-UDP", "DoS - UDP", "0.012", "3.10 σ", "0.060", "0.115", "0.185", "0.780", "PASS (Known)", "Known Attack Passed"],
-        ["#90412", "ZERO-DAY: DoS-HTTP", "DoS - HTTP (Guessed)", "0.852", "64.8 σ", "0.985", "0.978", "0.962", "0.780", "🚨 QUARANTINED", "Caught (TP: 100%)"],
-        ["#91523", "ZERO-DAY: DDoS-TCP", "DDoS - TCP (Guessed)", "0.891", "78.2 σ", "0.991", "0.984", "0.975", "0.780", "🚨 QUARANTINED", "Caught (TP: 100%)"],
-        ["#93218", "ZERO-DAY: Scan", "Service_Scan (Guessed)", "0.710", "42.5 σ", "0.942", "0.912", "0.890", "0.780", "🚨 QUARANTINED", "Caught (TP: 96%)"],
-        ["#94820", "ZERO-DAY: Exfiltration", "Normal (Guessed)", "0.760", "38.1 σ", "0.930", "0.945", "0.915", "0.780", "🚨 QUARANTINED", "Caught (TP: 100%)"]
+        ["#00142", "Benign Normal", "Normal", "0.002", "1.42 sigma", "0.031", "0.063", "0.041", "0.780", "PASS (Admitted)", "True Negative (TN)"],
+        ["#00891", "Benign Normal", "Normal", "0.005", "1.95 sigma", "0.045", "0.088", "0.062", "0.780", "PASS (Admitted)", "True Negative (TN)"],
+        ["#01249", "Known DoS-UDP", "DoS - UDP", "0.012", "3.10 sigma", "0.060", "0.115", "0.185", "0.780", "PASS (Known)", "Known Attack Passed"],
+        ["#90412", "ZERO-DAY: DoS-HTTP", "DoS - HTTP (Guessed)", "0.852", "64.8 sigma", "0.985", "0.978", "0.962", "0.780", "QUARANTINED", "Caught (TP: 100%)"],
+        ["#91523", "ZERO-DAY: DDoS-TCP", "DDoS - TCP (Guessed)", "0.891", "78.2 sigma", "0.991", "0.984", "0.975", "0.780", "QUARANTINED", "Caught (TP: 100%)"],
+        ["#93218", "ZERO-DAY: Scan", "Service_Scan (Guessed)", "0.710", "42.5 sigma", "0.942", "0.912", "0.890", "0.780", "QUARANTINED", "Caught (TP: 96%)"],
+        ["#94820", "ZERO-DAY: Exfiltration", "Normal (Guessed)", "0.760", "38.1 sigma", "0.930", "0.945", "0.915", "0.780", "QUARANTINED", "Caught (TP: 100%)"]
     ]
 
     t_trace = ax_trace.table(cellText=trace_rows, colLabels=trace_headers, loc='center', cellLoc='center')
@@ -391,8 +400,8 @@ def create_section3_dashboard():
     ax_dist.plot(x_vals, zeroday_dist, color=C_RED, linewidth=2.5, label="Withheld Zero-Day Attacks")
     ax_dist.fill_between(x_vals, 0, zeroday_dist, color=C_RED, alpha=0.15)
 
-    ax_dist.axvline(x=0.78, color=C_DARK, linestyle='--', linewidth=2.0, label="Calibrated Threshold τ = 0.78")
-    ax_dist.text(0.79, 0.85, "τ = 0.78 (P95 Cutoff)\n• False Alarms: 0.14%\n• Attacks Caught: 99.8%",
+    ax_dist.axvline(x=0.78, color=C_DARK, linestyle='--', linewidth=2.0, label="Calibrated Threshold tau = 0.78")
+    ax_dist.text(0.79, 0.85, "tau = 0.78 (P95 Cutoff)\n• False Alarms: 0.14%\n• Attacks Caught: 99.8%",
                  fontsize=8.5, fontweight='bold', color=C_DARK, bbox=dict(boxstyle='round,pad=0.4', facecolor='#FEF3C7', edgecolor=C_AMBER))
 
     ax_dist.set_title("Composite Score Density: Benign vs Zero-Day Separation", fontsize=11, fontweight='bold', color=C_DARK)
@@ -406,7 +415,7 @@ def create_section3_dashboard():
     ax_res.set_facecolor(C_WHITE)
     ax_res.axis('off')
 
-    ax_res.text(0.0, 1.04, "Final Zero-Day Isolation Metrics Across All 10 Held-Out Attacks",
+    ax_res.text(0.0, 1.05, "Final Zero-Day Isolation Metrics Across All 10 Held-Out Attacks",
                 fontsize=11, fontweight='bold', color=C_DARK, transform=ax_res.transAxes)
 
     res_headers = ["Held-Out Zero-Day", "Attack Flows", "Accuracy", "Precision", "Recall", "F1-Score"]
@@ -439,9 +448,9 @@ def create_section3_dashboard():
             cell.set_facecolor(C_WHITE)
 
     # Caption Box
-    caption_box = FancyBboxPatch((0.03, 0.012), 0.94, 0.036, boxstyle="round,pad=0.01",
+    caption_box = FancyBboxPatch((0.04, 0.012), 0.92, 0.036, boxstyle="round,pad=0.01",
                                  facecolor="#E2E8F0", edgecolor=C_GRAY_LIGHT, transform=fig.transFigure)
-    fig.patches.append(caption_box)
+    fig.add_artist(caption_box)
     fig.text(0.50, 0.025, "Multi-Signal Zero-Day Detection — Multiple scores are calibrated and fused to determine whether traffic is sufficiently different from known behaviour.",
              ha='center', va='center', fontsize=10.5, fontweight='bold', color=C_DARK)
 
