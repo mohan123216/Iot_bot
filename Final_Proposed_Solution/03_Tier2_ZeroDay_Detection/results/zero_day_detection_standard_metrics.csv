@@ -1,0 +1,11 @@
+Attack_Category,Attack_Subclass,Attack_Test_Flows,Normal_Test_Flows,Accuracy_pct,Precision_pct,Recall_pct,F1_Score_pct,Error_Rate_pct
+DDoS,HTTP,4040,2863,99.87,99.9,99.88,99.89,0.13
+DDoS,TCP,6154,2863,99.96,99.94,100.0,99.97,0.04
+DDoS,UDP,4761,2863,99.93,99.92,99.98,99.95,0.07
+DoS,HTTP,5960,2863,99.89,99.93,99.9,99.92,0.11
+DoS,TCP,3846,2863,99.94,99.9,100.0,99.95,0.06
+DoS,UDP,5239,2863,99.95,99.92,100.0,99.96,0.05
+Reconnaissance,OS_Fingerprint,10000,2863,99.48,99.97,99.36,99.66,0.52
+Reconnaissance,Service_Scan,10000,2863,96.77,99.97,95.88,97.88,3.23
+Theft,Data_Exfiltration,118,2863,99.6,96.49,93.22,94.83,0.4
+Theft,Keylogging,1469,2863,99.52,99.73,98.84,99.28,0.48
