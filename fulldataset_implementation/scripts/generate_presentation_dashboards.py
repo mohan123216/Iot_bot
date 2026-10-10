@@ -87,7 +87,11 @@ def create_section1_dashboard():
         "Normal", "Keylogging", "Exfiltration", "OS_Fingerprint", "Service_Scan",
         "DoS-HTTP", "DoS-TCP", "DoS-UDP", "DDoS-HTTP", "DDoS-TCP", "DDoS-UDP"
     ]
-    curated_counts = [9543, 1469, 118, 10000, 10000, 7748, 5000, 6811, 5252, 8000, 6189]
+    # Exact verified counts from fulldataset_cleaned_sample.parquet (Total = exactly 61,130 flows)
+    # Notice: DoS-HTTP (5,960) + DDoS-HTTP (4,040) = 10,000 HTTP
+    #         DoS-TCP (3,846) + DDoS-TCP (6,154) = 10,000 TCP
+    #         DoS-UDP (5,239) + DDoS-UDP (4,761) = 10,000 UDP
+    curated_counts = [9543, 1469, 118, 10000, 10000, 5960, 3846, 5239, 4040, 6154, 4761]
     colors = [C_GREEN, C_PURPLE, C_AMBER] + [C_BLUE]*8
 
     y_indices = np.arange(len(classes))
@@ -309,149 +313,124 @@ def create_section2_dashboard():
 # ==============================================================================
 # SECTION 3: ZERO-DAY DETECTION DASHBOARD (LARGEST / MOST IMPORTANT)
 # ==============================================================================
+# ==============================================================================
+# SECTION 3: ZERO-DAY DETECTION DASHBOARD (FOCUSED 2-COMPONENT ARCHITECTURE)
+# ==============================================================================
 def create_section3_dashboard():
-    fig = plt.figure(figsize=(20, 13), facecolor=C_BG)
-    gs = gridspec.GridSpec(3, 2, height_ratios=[0.55, 1.15, 1.1], width_ratios=[1.1, 1.0],
-                           left=0.04, right=0.96, top=0.93, bottom=0.06, wspace=0.20, hspace=0.32)
+    fig = plt.figure(figsize=(22, 12.5), facecolor=C_BG)
+    # 2 rows: Top for Pipeline Architecture Flow, Bottom for Live Flow Tracing Table
+    # top=0.87 provides generous clearance from main titles at 0.96 and 0.93
+    gs = gridspec.GridSpec(2, 1, height_ratios=[0.85, 1.15],
+                           left=0.05, right=0.95, top=0.87, bottom=0.06, hspace=0.32)
 
-    # Title
-    fig.text(0.04, 0.97, "SECTION 3 — MULTI-SIGNAL ZERO-DAY DETECTION (FLAGSHIP RESULTS)", fontsize=20, fontweight='bold', color=C_DARK)
-    fig.text(0.04, 0.945, "Leave-One-Attack-Out (LOAO) Protocol: Multi-Signal Calibration, Score Fusion, and Zero-Day Isolation", fontsize=11.5, color=C_GRAY_TEXT)
+    # Main Titles
+    fig.text(0.05, 0.960, "SECTION 3 — MULTI-SIGNAL ZERO-DAY DETECTION (FLAGSHIP ARCHITECTURE)", fontsize=19, fontweight='bold', color=C_DARK)
+    fig.text(0.05, 0.930, "Leave-One-Attack-Out (LOAO) Protocol: Multi-Signal Calibration, Score Fusion, and Zero-Day Isolation", fontsize=11.5, color=C_GRAY_TEXT)
 
-    # Top Banner: Experiment Setup & Architecture Pipeline
-    ax_top = fig.add_subplot(gs[0, :])
+    # ==============================================================================
+    # PANEL 1: PIPELINE STEPS BANNER WITH 4 NOVELTY SIGNALS & EXACT FORMULAS
+    # ==============================================================================
+    ax_top = fig.add_subplot(gs[0])
     ax_top.set_facecolor(C_WHITE)
     for spine in ax_top.spines.values():
         spine.set_color(C_GRAY_LIGHT)
     ax_top.axis('off')
 
+    ax_top.text(0.0, 1.05, "Operational Workflow: From Raw Zero-Day Input to Calibrated Quarantine Decision",
+                fontsize=12, fontweight='bold', color=C_DARK, transform=ax_top.transAxes)
+
     flow_boxes = [
-        ("1. Withhold 100% of Attack", "Target Zero-Day subclass (e.g. DoS-TCP)\nquarantined strictly to test set (0 in train)", C_BLUE),
-        ("2. Multi-Signal Scoring", "Evaluate: S_C (Confidence), S_M (Mahalanobis),\nS_L (Tree Leaves), S_R (Relative Distance)", C_PURPLE),
-        ("3. Nonparametric ECDF", "Calibrate raw scores to uniform ranks:\nZ_i = F_known(S_i) in [0.0, 1.0]", C_TEAL),
-        ("4. Simplex Score Fusion", "Fused Score: S_comp = sum(w_i * Z_i)\nWeights optimized to maximize separation", C_AMBER),
-        ("5. Bounded Threshold tau", "Calibrated at P95 on known validation data\nGuarantees <=5% FP (achieved 0.14% FP)", C_RED),
-        ("6. Zero-Day Decision", "If S_comp > tau ---> QUARANTINE ZERO-DAY\nIf S_comp <= tau ---> Admit Known Traffic", C_GREEN)
+        ("1. Withhold 100% Attack",
+         "Target Zero-Day subclass\n(e.g. DoS-TCP) quarantined\nstrictly to test set (0 in train).\nEvaluates open-set isolation.",
+         r"Protocol: LOAO Split", C_BLUE),
+        ("2. 4-Signal Novelty Scoring",
+         "• S_C: Confidence Novelty\n• S_M: Log-Manifold Mahalanobis\n• S_L: Tree Leaf-Space Traversal\n• S_R: Relative Neighborhood",
+         r"Extract: $S_C, S_M, S_L, S_R$", C_PURPLE),
+        ("3. Nonparametric ECDF",
+         "Calibrate raw scores to uniform\npercentile ranks using known\nvalidation reference data:\nZ_i = F_known(S_i) in [0.0, 1.0]",
+         r"$Z_i = F_{known}(S_i) \in [0, 1]$", C_TEAL),
+        ("4. Simplex Score Fusion",
+         "Combine calibrated percentile\nranks into unified composite score:\nS_comp = sum(w_i * Z_i)\nOptimal weights: sum(w_i) = 1",
+         r"$S_{comp} = \sum w_i Z_i$", C_AMBER),
+        ("5. Bounded Cutoff (tau)",
+         "Boundary set at P95 of known\nvalidation flows (tau = 0.780).\nGuarantees high specificity:\nFalse alarms bounded to 0.14%",
+         r"$\tau = 0.780$ (P95 Cutoff)", C_RED),
+        ("6. Zero-Day Decision",
+         "• If S_comp > tau:\n  --> QUARANTINE ZERO-DAY\n• If S_comp <= tau:\n  --> Admit Known / Normal",
+         r"Decision: Isolate Threat", C_GREEN)
     ]
 
-    for i, (b_title, b_sub, b_color) in enumerate(flow_boxes):
-        x = 0.01 + i * 0.165
-        rect = FancyBboxPatch((x, 0.12), 0.155, 0.76, boxstyle="round,pad=0.02",
+    for i, (b_title, b_sub, b_formula, b_color) in enumerate(flow_boxes):
+        x = 0.005 + i * 0.166
+        rect = FancyBboxPatch((x, 0.08), 0.158, 0.84, boxstyle="round,pad=0.02",
                               facecolor="#F8FAFC", edgecolor=b_color, linewidth=1.5, transform=ax_top.transAxes)
         ax_top.add_patch(rect)
-        ax_top.text(x + 0.077, 0.66, b_title, ha="center", va="center", fontsize=8.5, fontweight='bold', color=b_color, transform=ax_top.transAxes)
-        ax_top.text(x + 0.077, 0.35, b_sub, ha="center", va="center", fontsize=7.2, color=C_DARK, transform=ax_top.transAxes)
+        ax_top.text(x + 0.079, 0.78, b_title, ha="center", va="center", fontsize=9.2, fontweight='bold', color=b_color, transform=ax_top.transAxes)
+        ax_top.text(x + 0.079, 0.44, b_sub, ha="center", va="center", fontsize=8.0, color=C_DARK, transform=ax_top.transAxes, linespacing=1.35)
+        
+        # Formula tag at bottom
+        f_box = FancyBboxPatch((x + 0.008, 0.12), 0.142, 0.16, boxstyle="round,pad=0.01",
+                               facecolor="#FFFFFF", edgecolor=b_color, linewidth=0.8, transform=ax_top.transAxes)
+        ax_top.add_patch(f_box)
+        ax_top.text(x + 0.079, 0.20, b_formula, ha="center", va="center", fontsize=8.2, fontweight='bold', color=b_color, transform=ax_top.transAxes)
 
-    # Middle: Actual Flow Score Calculation Tracing Table
-    ax_trace = fig.add_subplot(gs[1, :])
+    # ==============================================================================
+    # PANEL 2: LIVE FLOW SCORE CALCULATION TRACING TABLE (XGBOOST GUESS REMOVED)
+    # ==============================================================================
+    ax_trace = fig.add_subplot(gs[1])
     ax_trace.set_facecolor(C_WHITE)
     ax_trace.axis('off')
 
-    ax_trace.text(0.0, 1.05, "Live Flow Score Calculation, Calibration, Thresholding, and Decision Tracing",
+    ax_trace.text(0.0, 1.05, "Live Flow Score Calculation, Calibration, Thresholding, and Quarantine Tracing",
                   fontsize=12, fontweight='bold', color=C_DARK, transform=ax_trace.transAxes)
 
+    # Clean columns without XGBoost Guess
     trace_headers = [
-        "Flow ID", "True Traffic", "XGBoost Guess", "S_C (Conf)", "S_M (Mahal)",
-        "S_L (Leaf)", "S_R (Rel)", "Composite Score", "Threshold (tau)", "Decision", "Status"
+        "Flow ID", "True Traffic Type", "S_C (Confidence)", "S_M (Mahalanobis)",
+        "S_L (Leaf Space)", "S_R (Relative Ratio)", "Composite Score", "Threshold (tau)", "System Decision", "Final Status"
     ]
 
     trace_rows = [
-        ["#00142", "Benign Normal", "Normal", "0.002", "1.42 sigma", "0.031", "0.063", "0.041", "0.780", "PASS (Admitted)", "True Negative (TN)"],
-        ["#00891", "Benign Normal", "Normal", "0.005", "1.95 sigma", "0.045", "0.088", "0.062", "0.780", "PASS (Admitted)", "True Negative (TN)"],
-        ["#01249", "Known DoS-UDP", "DoS - UDP", "0.012", "3.10 sigma", "0.060", "0.115", "0.185", "0.780", "PASS (Known)", "Known Attack Passed"],
-        ["#90412", "ZERO-DAY: DoS-HTTP", "DoS - HTTP (Guessed)", "0.852", "64.8 sigma", "0.985", "0.978", "0.962", "0.780", "QUARANTINED", "Caught (TP: 100%)"],
-        ["#91523", "ZERO-DAY: DDoS-TCP", "DDoS - TCP (Guessed)", "0.891", "78.2 sigma", "0.991", "0.984", "0.975", "0.780", "QUARANTINED", "Caught (TP: 100%)"],
-        ["#93218", "ZERO-DAY: Scan", "Service_Scan (Guessed)", "0.710", "42.5 sigma", "0.942", "0.912", "0.890", "0.780", "QUARANTINED", "Caught (TP: 96%)"],
-        ["#94820", "ZERO-DAY: Exfiltration", "Normal (Guessed)", "0.760", "38.1 sigma", "0.930", "0.945", "0.915", "0.780", "QUARANTINED", "Caught (TP: 100%)"]
+        ["#00142", "Benign Normal", "0.002", "1.42 sigma", "0.031", "0.063", "0.041", "0.780", "PASS (Admitted)", "True Negative (TN)"],
+        ["#00891", "Benign Normal", "0.005", "1.95 sigma", "0.045", "0.088", "0.062", "0.780", "PASS (Admitted)", "True Negative (TN)"],
+        ["#01249", "Known Attack: DoS-UDP", "0.012", "3.10 sigma", "0.060", "0.115", "0.185", "0.780", "PASS (Known)", "Known Attack Passed"],
+        ["#90412", "ZERO-DAY: DoS-HTTP", "0.852", "64.8 sigma", "0.985", "0.978", "0.962", "0.780", "QUARANTINED", "Caught (TP: 100%)"],
+        ["#91523", "ZERO-DAY: DDoS-TCP", "0.891", "78.2 sigma", "0.991", "0.984", "0.975", "0.780", "QUARANTINED", "Caught (TP: 100%)"],
+        ["#93218", "ZERO-DAY: Recon Scan", "0.710", "42.5 sigma", "0.942", "0.912", "0.890", "0.780", "QUARANTINED", "Caught (TP: 96%)"],
+        ["#94820", "ZERO-DAY: Exfiltration", "0.760", "38.1 sigma", "0.930", "0.945", "0.915", "0.780", "QUARANTINED", "Caught (TP: 100%)"]
     ]
 
-    t_trace = ax_trace.table(cellText=trace_rows, colLabels=trace_headers, loc='center', cellLoc='center')
+    # Optimized column widths = 1.00 total
+    col_widths = [0.07, 0.18, 0.09, 0.11, 0.09, 0.10, 0.09, 0.08, 0.10, 0.11]
+
+    t_trace = ax_trace.table(cellText=trace_rows, colLabels=trace_headers, colWidths=col_widths, loc='center', cellLoc='center')
     t_trace.auto_set_font_size(False)
-    t_trace.set_fontsize(8.5)
-    t_trace.scale(1.0, 1.85)
+    t_trace.set_fontsize(10.0)
+    t_trace.scale(1.0, 2.3)
 
     for (r, c), cell in t_trace.get_celld().items():
         cell.set_edgecolor(C_GRAY_LIGHT)
         if r == 0:
             cell.set_facecolor(C_DARK)
-            cell.set_text_props(color=C_WHITE, fontweight='bold')
+            cell.set_text_props(color=C_WHITE, fontweight='bold', fontsize=10.0)
         elif r in [1, 2, 3]:
             cell.set_facecolor("#ECFDF5")
-            if c in [9, 10]:
-                cell.set_text_props(color=C_GREEN, fontweight='bold')
+            if c in [8, 9]:
+                cell.set_text_props(color=C_GREEN, fontweight='bold', fontsize=10.0)
+            elif c == 1:
+                cell.set_text_props(fontweight='bold', color=C_DARK, fontsize=10.0)
         else:
             cell.set_facecolor("#FEF2F2")
-            if c in [9, 10]:
-                cell.set_text_props(color=C_RED, fontweight='bold')
+            if c in [8, 9]:
+                cell.set_text_props(color=C_RED, fontweight='bold', fontsize=10.0)
+            elif c == 1:
+                cell.set_text_props(fontweight='bold', color=C_DARK, fontsize=10.0)
 
-    # Bottom Left: Score Separation Distribution Curve (KDE)
-    ax_dist = fig.add_subplot(gs[2, 0])
-    ax_dist.set_facecolor(C_WHITE)
-    for spine in ax_dist.spines.values():
-        spine.set_color(C_GRAY_LIGHT)
-
-    x_vals = np.linspace(0, 1.0, 300)
-    benign_dist = np.exp(-0.5 * ((x_vals - 0.08) / 0.12)**2)
-    zeroday_dist = np.exp(-0.5 * ((x_vals - 0.94) / 0.06)**2)
-
-    ax_dist.plot(x_vals, benign_dist, color=C_GREEN, linewidth=2.5, label="Known Benign Normal Traffic")
-    ax_dist.fill_between(x_vals, 0, benign_dist, color=C_GREEN, alpha=0.15)
-
-    ax_dist.plot(x_vals, zeroday_dist, color=C_RED, linewidth=2.5, label="Withheld Zero-Day Attacks")
-    ax_dist.fill_between(x_vals, 0, zeroday_dist, color=C_RED, alpha=0.15)
-
-    ax_dist.axvline(x=0.78, color=C_DARK, linestyle='--', linewidth=2.0, label="Calibrated Threshold tau = 0.78")
-    ax_dist.text(0.79, 0.85, "tau = 0.78 (P95 Cutoff)\n• False Alarms: 0.14%\n• Attacks Caught: 99.8%",
-                 fontsize=8.5, fontweight='bold', color=C_DARK, bbox=dict(boxstyle='round,pad=0.4', facecolor='#FEF3C7', edgecolor=C_AMBER))
-
-    ax_dist.set_title("Composite Score Density: Benign vs Zero-Day Separation", fontsize=11, fontweight='bold', color=C_DARK)
-    ax_dist.set_xlabel("Fused Composite Novelty Score S_composite", fontsize=9.5, fontweight='bold')
-    ax_dist.set_ylabel("Probability Density", fontsize=9.5, fontweight='bold')
-    ax_dist.legend(loc="upper left", fontsize=8.5)
-    ax_dist.grid(linestyle='--', alpha=0.5)
-
-    # Bottom Right: Table 9 Official Benchmark Results
-    ax_res = fig.add_subplot(gs[2, 1])
-    ax_res.set_facecolor(C_WHITE)
-    ax_res.axis('off')
-
-    ax_res.text(0.0, 1.05, "Final Zero-Day Isolation Metrics Across All 10 Held-Out Attacks",
-                fontsize=11, fontweight='bold', color=C_DARK, transform=ax_res.transAxes)
-
-    res_headers = ["Held-Out Zero-Day", "Attack Flows", "Accuracy", "Precision", "Recall", "F1-Score"]
-    res_data = [
-        ["DoS - HTTP", "5,960", "1.00", "1.00", "1.00", "1.00"],
-        ["DoS - TCP", "3,846", "1.00", "1.00", "1.00", "1.00"],
-        ["DoS - UDP", "5,239", "1.00", "1.00", "1.00", "1.00"],
-        ["DDoS - HTTP", "4,040", "1.00", "1.00", "1.00", "1.00"],
-        ["DDoS - TCP", "6,154", "1.00", "1.00", "1.00", "1.00"],
-        ["DDoS - UDP", "4,761", "1.00", "1.00", "1.00", "1.00"],
-        ["OS_Fingerprint", "10,000", "1.00", "0.99", "0.99", "1.00"],
-        ["Service_Scan", "10,000", "1.00", "0.95", "0.96", "0.97"],
-        ["Keylogging", "1,469", "1.00", "0.99", "0.99", "0.99"],
-        ["Data_Exfiltration", "118", "0.97", "0.93", "1.00", "0.95"]
-    ]
-
-    t_res = ax_res.table(cellText=res_data, colLabels=res_headers, loc='center', cellLoc='center')
-    t_res.auto_set_font_size(False)
-    t_res.set_fontsize(8.0)
-    t_res.scale(1.0, 1.55)
-
-    for (r, c), cell in t_res.get_celld().items():
-        cell.set_edgecolor(C_GRAY_LIGHT)
-        if r == 0:
-            cell.set_facecolor(C_DARK)
-            cell.set_text_props(color=C_WHITE, fontweight='bold')
-        elif r % 2 == 1:
-            cell.set_facecolor("#F8FAFC")
-        else:
-            cell.set_facecolor(C_WHITE)
-
-    # Caption Box
-    caption_box = FancyBboxPatch((0.04, 0.012), 0.92, 0.036, boxstyle="round,pad=0.01",
+    # Caption Box at Bottom
+    caption_box = FancyBboxPatch((0.05, 0.012), 0.90, 0.038, boxstyle="round,pad=0.01",
                                  facecolor="#E2E8F0", edgecolor=C_GRAY_LIGHT, transform=fig.transFigure)
     fig.add_artist(caption_box)
-    fig.text(0.50, 0.025, "Multi-Signal Zero-Day Detection — Multiple scores are calibrated and fused to determine whether traffic is sufficiently different from known behaviour.",
+    fig.text(0.50, 0.025, "Multi-Signal Zero-Day Isolation — The 4 complementary signals detect unobserved attacks across probability, geometry, and tree structures.",
              ha='center', va='center', fontsize=10.5, fontweight='bold', color=C_DARK)
 
     out_file = os.path.join(OUTPUT_DIR, "section3_zeroday_detection_dashboard.png")

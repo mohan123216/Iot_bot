@@ -28,29 +28,27 @@ Our solution is a **Two-Tier Hybrid Open-Set Multi-Signal Architecture**:
                                               │ Logits + Tree Leaves + Flow Data
                                               ▼
             ┌──────────────────────────────────────────────────────────────────┐
-            │ TIER 2: ADVANCED MULTI-SIGNAL OPEN-SET ZERO-DAY ENGINE           │
+            │ TIER 2: 4-SIGNAL OPEN-SET ZERO-DAY REJECTION ENGINE              │
             │                                                                  │
-            │  Signal 1: Logit Free-Energy Score                               │
-            │            E(x) = -T * log Σ exp(f_k(x) / T)                     │
-            │            (Eliminates Softmax 100%-sum overconfidence)          │
+            │  Signal 1: Confidence Novelty (S_C = 1.0 - P_max)                │
+            │            (Measures prediction uncertainty & model entropy)     │
             │                                                                  │
-            │  Signal 2: Log-Manifold Regularized Mahalanobis Distance         │
+            │  Signal 2: Log-Manifold Regularized Mahalanobis Distance (S_M)   │
             │            D_M(x) = sqrt((z - μ_c)^T * Σ_c^-1 * (z - μ_c))        │
             │            (Ledoit-Wolf covariance shrinkage on log(1 + x))      │
             │                                                                  │
-            │  Signal 3: Relative Margin Distance Ratio                        │
-            │            R(x) = D_M(pred) / (min_{j≠pred} D_M(j) + ε)           │
-            │            (Detects boundary ambiguity between known classes)    │
-            │                                                                  │
-            │  Signal 4: Tree Leaf-Space Traversal Novelty                     │
+            │  Signal 3: Tree Leaf-Space Traversal Novelty (S_L)               │
             │            S_leaf = 1.0 - LeafSim(x, c)                          │
             │            (Detects structural anomalies across 100 trees)       │
             │                                                                  │
-            │  Signal 5: Protocol-Port Semantic Anomaly Score                  │
-            │            (Catches port-protocol mismatch & zero-replies)       │
+            │  Signal 4: Relative Margin Distance Ratio (S_R)                  │
+            │            R(x) = D_M(pred) / (min_{j≠pred} D_M(j) + ε)           │
+            │            (Detects boundary ambiguity between known classes)    │
             │                                                                  │
-            │  FUSION:   Soft-Max Pooling (β = 5.0)                            │
-            │            S_final = (1 / β) * log Σ exp(β * Z_i)                │
+            │  CALIBRATION: Empirical CDF Percentile Normalizer (searchsorted) │
+            │               Z_i(x) = P(S_known <= S_i(x)) in [0.0, 1.0]        │
+            │  FUSION:      S_unified = sum(w_i * Z_i)                         │
+            │  THRESHOLD:   tau = percentile(S_val, 95.0) on Known Validation  │
             └─────────────────────────────────┬────────────────────────────────┘
                                               │
                                               ▼
@@ -147,16 +145,15 @@ When explaining your project to an evaluator, professor, or examiner, follow thi
 - **Our Solution:** We engineered **35 domain networking features** (such as source-to-destination payload asymmetry `sbytes_ratio` and port profiling), combined with **inverse-frequency class weighting** ($w_c = N / (K \cdot N_c)$) in an XGBoost ensemble.
 - **Results:** Achieved **98.97% overall multi-class accuracy**, with **99.82% specificity on normal traffic** and **93.62% F1-score on Data Exfiltration**.
 
-### Step 3: Tier 2 - Multi-Signal Zero-Day Novelty Engine
+### Step 3: Tier 2 - 4-Signal Open-Set Zero-Day Rejection Engine
 - **The Problem:** Standard classifiers suffer from the **Softmax 100%-Sum Fallacy**. When an unobserved zero-day attack appears, softmax forces the output probabilities to sum to 100%, causing the model to misclassify the alien attack as a known one with high false confidence. Baselines achieve only 33% recall.
-- **Our Solution:** We decoupled novelty detection from classification using **5 complementary signals**:
-  1. *Logit Free Energy* (measures raw unnormalized margin energy).
-  2. *Log-Manifold Mahalanobis Geometry* (measures metric distance from known centroids with Ledoit-Wolf shrinkage).
-  3. *Relative Margin Ratio* (measures boundary void ambiguity).
-  4. *Tree Leaf-Space Traversal Novelty* (measures path activation novelty across 100 trees).
-  5. *Protocol-Port Semantic Anomaly* (flags transport violations like UDP on port 80).
-  Signals are unified via **Soft-Max Pooling ($\beta = 5.0$)**.
-- **Results:** 99.8% - 100.0% detection rate on volumetric attacks, with only 0.14% false alarms on benign normal traffic.
+- **Our Solution:** We decoupled novelty detection from classification using **4 foundational novelty signals**:
+  1. *Confidence Novelty* ($S_C = 1.0 - P_{\max}$, measures prediction uncertainty).
+  2. *Log-Manifold Mahalanobis Geometry* ($S_M = D_M$, Ledoit-Wolf regularized covariance distance).
+  3. *Tree Leaf-Space Traversal Novelty* ($S_L = 1.0 - \text{LeafSim}$, tracks path novelty across 100 decision trees).
+  4. *Relative Neighborhood Margin Ratio* ($S_R = D_M / D_{\text{other}}$, measures boundary ambiguity).
+  Signals are normalized into **calibrated percentile ranks** $Z_i \in [0.0, 1.0]$ via an **Empirical CDF Normalizer** and evaluated against an operational threshold $\tau = \text{percentile}(S_{\text{val}}, 95.0)$.
+- **Results:** Over 95% known traffic acceptance rate, >96% benign normal specificity, and robust rejection of zero-day threats without relying on arbitrary port heuristics.
 
 ### Step 4: Empirical Benchmark vs ACM TOPS 2025 Table 9
 - **The Protocol:** Strict **Leave-One-Subclass-Out (LOCO / Type-B Unknown Attack)** across all 10 subclasses.
