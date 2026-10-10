@@ -1,0 +1,11 @@
+Class,Subclass,Original_Precision,Retrained_Precision,Original_Recall,Retrained_Recall,Original_F1,Retrained_F1,Original_Accuracy,Retrained_Accuracy,Status
+DoS,HTTP,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,MATCH (100%)
+DoS,TCP,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,MATCH (100%)
+DoS,UDP,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,MATCH (100%)
+DDoS,HTTP,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,MATCH (100%)
+DDoS,TCP,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,MATCH (100%)
+DDoS,UDP,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,MATCH (100%)
+Reconnaissance,OS_Fingerprint,1.0,1.0,0.99,0.99,1.0,1.0,0.99,0.99,MATCH (100%)
+Reconnaissance,Service_Scan,1.0,1.0,0.95,0.95,0.97,0.97,0.96,0.96,MATCH (100%)
+Theft,Keylogging,1.0,1.0,0.99,0.99,0.99,0.99,0.99,0.99,MATCH (100%)
+Theft,Data_Exfiltration,0.97,0.97,0.93,0.93,0.95,0.95,1.0,1.0,MATCH (100%)
