@@ -104,24 +104,12 @@ def create_section1_dashboard():
         ("Hardware/Geo (4)", "soui, doui, sco, dco", "IEEE hardware vendor prefixes and country metadata.", C_PURPLE)
     ]
 
-    y = 0.77
+    y = 0.75
     for grp, cols, reason, col in c2_dropped:
-        ax2.text(0.03, y, f"✗ {grp}:", fontsize=10.8, fontweight='bold', color=col, va='top')
-        ax2.text(0.26, y, f"[{cols}]", fontsize=10.3, fontweight='bold', color=C_DARK, va='top')
-        ax2.text(0.48, y, reason, fontsize=9.8, color=C_GRAY_TEXT, va='top')
-        y -= 0.086
-
-    # Viva Defense Callout Box
-    callout = FancyBboxPatch((0.025, 0.05), 0.95, 0.23, boxstyle="round,pad=0.02,rounding_size=0.03",
-                             facecolor="#EFF6FF", edgecolor=C_BLUE, linewidth=1.2)
-    ax2.add_patch(callout)
-    ax2.text(0.045, 0.24, "VIVA DEFENSE: WHY DROP 12 FEATURES? (PREVENT SHORTCUT LEARNING)",
-             fontsize=10.2, fontweight='bold', color=C_BLUE, va='top')
-    ax2.text(0.045, 0.17,
-             "Models trained with IP/MAC addresses or timestamps trivially achieve ~99.9% accuracy by\n"
-             "memorizing attacker identities, but fail in real deployment. Dropping them forces our models\n"
-             "to classify strictly based on behavioral traffic dynamics, packet rates, and flow statistics.",
-             fontsize=9.5, color=C_DARK, linespacing=1.3, va='top')
+        ax2.text(0.03, y, f"✗ {grp}:", fontsize=11.2, fontweight='bold', color=col, va='top')
+        ax2.text(0.26, y, f"[{cols}]", fontsize=10.8, fontweight='bold', color=C_DARK, va='top')
+        ax2.text(0.48, y, reason, fontsize=10.2, color=C_GRAY_TEXT, va='top')
+        y -= 0.125
 
     # CARD 3 (Bottom-Left): Preprocessing & Data Anomalies Handled
     ax3 = fig.add_subplot(gs[1, 0])
